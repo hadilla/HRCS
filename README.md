@@ -1,2 +1,3 @@
 # HRCS
-hospital management system
+HEALTH REPORT CARD SYSTEM
+
