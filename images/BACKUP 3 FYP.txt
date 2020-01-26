@@ -1,0 +1,1912 @@
+BACKUP 3 <FYP>
+HOMEPAGE<HTM><CSS>
+<html>
+<head>
+<title>Health Report Card System</title>
+<link rel="stylesheet" href= "style.css">
+<link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <div class="menu-bar">
+<ul>
+<li class="active"><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href= "#">Health Info</a></li>
+<li><a href= "#">Medical Staff</a>
+    <div class="sub-menu-1">
+	  <ul>
+	     <li class="hover-me"><a href="#">Nurse</a></i class="fa fa-angle-right"></i>
+		   <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Information</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		 <li class="hover-me"><a href="#">Doctor</a></i class=" fa fa-angle-right"></i>
+		  <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Treatment</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		
+		 <li><a href="#">View Health Information</a></li>  
+		 
+	  </ul>
+	</div>
+	</li>
+		 
+<li><a href= "#">Patients</a>
+      <div class= "sub-menu-1">
+	  <ul>
+		 <li><a href="#">Profile</a></li>  
+		 <li><a href="#">View Health Information</a></li>  
+	  </ul>
+	</div>
+	</li>
+   
+<li><a href= "register.html">Register</a></li>
+<li><a href= "Login.html"><i class="fa fa-user"></i>Login</a></li>
+
+
+</ul>
+</div>
+<div class="box">
+   <h1>Health Report Card System</h1>
+   </div>
+   <br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+  <div align ="center">copyright NORADILLA
+</div>
+   
+
+</body>
+
+</html>
+
+(CSS) HOMEPAGE
+
+*
+{
+	padding: 0;
+	margin: 0;
+}
+  body
+  {
+	  background-image: url(pkubackground1.jpg);
+	  background-size: cover;
+	  background-position: center;
+	  box-sizing: border-box;
+	  font-family: san-serif;
+  }
+  .menu-bar 
+  {
+	  background: rgb(0,0,139);
+	  text-align: center;
+  }
+  .menu-bar ul
+  {
+	  display: inline-flex;
+	  list-style: none;
+	  color: #fff;
+  }
+  .menu-bar ul li
+  {
+	  width: 120px;
+	  margin: 15px;
+	  padding: 15px;
+  }
+  .menu-bar ul li a
+  {
+	  text-decoration: none;
+	  color: #fff;
+  }
+  .active, .menu-bar ul li a:hover
+  {
+	  background: #2196F3;
+	  border-radius: 3px;
+	  
+  }
+  .menu-bar .fa
+  {
+	  margin-right: 8px;
+  }
+  
+  .sub-menu-1
+  {
+	  display: none;
+	  
+  }
+  .menu-bar ul li:hover .sub-menu-1 
+  {
+	  display: block;
+	  position: absolute;
+	  background: rgb(0,0,139);
+	  margin-top: 15px;
+	  margin-left: -15px;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul
+  {
+	  display: block;
+	  margin: 10px;
+	 
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li
+  {
+	  width: 150px;
+	  padding: 10px;
+	  border-bottom: 1px dotted #fff;
+	  background: transparent;
+	  border-radius: 0;
+	  text-align: left;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+  {
+	  border-bottom: none;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+  {
+	  color: #48D1CC;
+	  
+  }
+  .fa-angle-right
+  {
+	  float: right;
+  }
+  .sub-menu-2
+  {
+	  display: none;
+  }
+  .hover-me:hover .sub-menu-2
+  {
+	  position: absolute;
+	  display: block;
+	  margin-top: -40px;
+	  margin-left: 140px;
+	  background: rgb(0,0,139);
+  }
+	  
+  
+  
+  .box{
+	  height: 50vh;
+  }
+  h1
+  {
+	  position: absolute;
+	  top: 40%;
+	  transform: translateV(-50%);
+	  margin: 0;
+	  padding: 0;
+	  text-align: center;
+	  font-size: 6em;
+	  color: #fff;
+	  text-transform: uppercase;
+	  text-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	  mix-blend-mode: overlay;
+	  background: rgba(0,0,0,0.5);
+	  
+	  
+	  
+	  
+  }
+
+LOGIN <HTML>
+<html>
+<head>
+<title>LOGIN FORM</title>
+    <link rel="stylesheet" type="text/css" href="stylelogin.css">
+	<link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+</head>
+<body>
+ <div class="menu-bar">
+<ul>
+<li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href= "#">Health Info</a></li>
+<li><a href= "#">Medical Staff</a>
+    <div class="sub-menu-1">
+	  <ul>
+	     <li class="hover-me"><a href="#">Nurse</a></i class="fa fa-angle-right"></i>
+		   <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Information</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		 <li class="hover-me"><a href="#">Doctor</a></i class=" fa fa-angle-right"></i>
+		  <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Treatment</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		
+		 <li><a href="#">View Health Information</a></li>  
+		 
+	  </ul>
+	</div>
+	</li>
+		 
+<li><a href= "#">Patients</a>
+      <div class= "sub-menu-1">
+	  <ul>
+		 <li><a href="#">Profile</a></li>  
+		 <li><a href="#">View Health Information</a></li>  
+	  </ul>
+	</div>
+	</li>
+   
+<li><a href= "register.html">Register</a></li>
+<li class= "active"><a href= "Login.html"><i class="fa fa-user"></i>Login</a></li>
+
+</ul>
+</div>
+
+
+   <div class="loginbox">
+   <img src="icon.png" class="icon">
+      <h1>LOGIN HERE</h1>
+       <form>
+	       <p>Username</p>
+		   <input type= "text" name= "" placeholder="Enter Username">
+		   <p>Password</p>
+		   <input type= "password" name="" placeholder="Enter Password">
+		   <p>User</p>
+			   <select name="slt-1" id="slt-1">
+			      <option>Choose An Option</option>
+				  <option value="1">Medical Staff</option>
+		           <option value="1">Patient</option>
+		  <br>
+		  <br>
+		   <input type="submit" name="" value="LOGIN"><br>
+		   
+		   <a href="#" >Forgot password</a><br>
+		   <a href= "#">Don't have an account?</a>
+		   	   
+	   
+      </form>	   
+   </div>
+    
+   
+
+
+</body>
+
+</html>
+
+(CSS)
+body{
+	margin: 0;
+	padding: 0;
+	background: url(whitebackground.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: san-serif;
+	
+}
+.loginbox{
+	width: 350px;
+	height: 400px;
+	background:#2d85b0 ;
+	color: #fff;
+	top: 70%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+	
+	
+	
+}
+	.icon{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		position: absolute;
+		top: -50px;
+		left: calc(50% - 50px);
+		
+		
+	}
+	h1{
+		margin: 0;
+		padding: 0 0 10px;
+		text-align: center;
+		font-size: 22px;
+		
+	}
+	.loginbox p{
+		margin: 0;
+		padding: 0:
+		font-weight: bold;
+		
+	}
+	.loginbox input{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.loginbox input[type="text"], input[type="password"]
+	{
+		border: none;
+		border-bottom: 1px solid #fff;
+		background: transparent;
+		outline: none;
+		height: 40px;
+		color: #fff;
+		font-size: 16px;
+		
+		
+	}
+	.loginbox input[type="submit"]
+	{
+		border: none;
+		outline: none;
+		height: 30px;
+		background:#00CCFF ;
+		color: #fff;
+		font-size: 18px;
+		border-radius: 20px;
+		
+	}
+	.loginbox input[type="submit"]:hover
+	{
+		cursor: pointed;
+		background:#ffc107;
+		color: #000;
+		
+	}
+	.loginbox a{
+		text-decoration: none;
+		font-size: 12px;
+		line-height: 20px;
+		color: darkgrey;
+	}
+	.loginbox a:hover
+	{
+		color: #ffc107;
+	}
+	 .menu-bar 
+  {
+	  background: rgb(0,0,139);
+	  text-align: center;
+  }
+  .menu-bar ul
+  {
+	  display: inline-flex;
+	  list-style: none;
+	  color: #fff;
+  }
+  .menu-bar ul li
+  {
+	  width: 120px;
+	  margin: 1px;
+	  padding: 15px;
+  }
+  .menu-bar ul li a
+  {
+	  text-decoration: none;
+	  color: #fff;
+  }
+  .active, .menu-bar ul li a:hover
+  {
+	  background: #2196F3;
+	  border-radius: 3px;
+	  
+  }
+  .menu-bar .fa
+  {
+	  margin-right: 8px;
+  }
+  
+  .sub-menu-1
+  {
+	  display: none;
+	  
+  }
+  .menu-bar ul li:hover .sub-menu-1 
+  {
+	  display: block;
+	  position: absolute;
+	  background: rgb(0,0,139);
+	  margin-top: 15px;
+	  margin-left: -15px;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul
+  {
+	  display: block;
+	  margin: 10px;
+	 
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li
+  {
+	  width: 150px;
+	  padding: 10px;
+	  border-bottom: 1px dotted #fff;
+	  background: transparent;
+	  border-radius: 0;
+	  text-align: left;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+  {
+	  border-bottom: none;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+  {
+	  color: #48D1CC;
+	  
+  }
+  .fa-angle-right
+  {
+	  float: right;
+  }
+  .sub-menu-2
+  {
+	  display: none;
+  }
+  .hover-me:hover .sub-menu-2
+  {
+	  position: absolute;
+	  display: block;
+	  margin-top: -40px;
+	  margin-left: 140px;
+	  background: rgb(0,0,139);
+  }
+  
+  .loginbox select[name="slt-1"]
+	{
+		
+		height: 30px;
+		font-size: 14px;
+	}
+ 
+
+REGISTER(HTML)
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Registration Form</title>
+   <link rel="stylesheet" type="text/css" href="styleregister.css">
+   <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+   <body>
+    <div class="menu-bar">
+<ul>
+<li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href= "#">Health Info</a></li>
+<li><a href= "#">Medical Staff</a>
+    <div class="sub-menu-1">
+	  <ul>
+	     <li class="hover-me"><a href="#">Nurse</a></i class="fa fa-angle-right"></i>
+		   <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Information</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		 <li class="hover-me"><a href="#">Doctor</a></i class=" fa fa-angle-right"></i>
+		  <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Treatment</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		
+		 <li><a href="#">View Health Information</a></li>  
+		 
+	  </ul>
+	</div>
+	</li>
+		 
+<li><a href= "#">Patients</a>
+      <div class= "sub-menu-1">
+	  <ul>
+		 <li><a href="#">Profile</a></li>  
+		 <li><a href="#">View Health Information</a></li>  
+	  </ul>
+	</div>
+	</li>
+   
+<li class="active"><a href= "register.html">Register</a></li>
+<li><a href= "Login.html"><i class="fa fa-user"></i>Login</a></li>
+
+</ul>
+</div>
+<br>
+<br>
+<br>
+	
+	
+	
+	
+	<div class="register">
+	  <h2>Register Form</h2>
+	<form method="post" id="register" action="">
+	
+		<label> Username  :</label><br>
+		<input type="text" name="Username" id="name" placeholder="Enter Username"><br><br>
+		<label> Password  :</label><br>
+		<input type="password" name="Password" id="name" placeholder="Enter Password"><br><br>
+		<label> Position  :</label><br>
+		<input type="position" name="Position" id="name" placeholder="Enter Position"><br><br>
+		<label> IC Number :</label><br>
+		<input type="number" name="IC Number" id="num" placeholder="Enter IC Number"><br><br>
+		<label> Address   :</label><br>
+		<textarea name ="Address" rows="5" cols="55"></textarea><br><br>
+		<label> Email     :</label><br>
+		<input type="email" name="Email" id="name" placeholder="Enter Email"><br><br>
+		
+		
+		
+		
+		<br>
+		<input type="submit" name="" value="REGISTER" id="sub">
+	</form>
+	</div>
+	
+   
+   
+   </body>
+ </html>
+
+(CSS)
+*
+{
+	margin: 0;
+	padding: 0;
+	
+}
+body{
+	background-image: url(whitebackground.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+h2{
+	text-align: center;
+	padding: 20px;
+	
+}
+
+.register{
+	  background: #2d85b0;
+	width: 500px;
+	margin: 0px 0px 0px 430px;
+	color: white;
+	font-size: 18px;
+	    padding: 20px;
+    border-radius: 10px;
+
+	
+}
+
+#register{
+	margin-left: 50px;
+}
+
+label{
+	color: white;
+	font-family: san-serif;
+	font-size: 18px;
+	
+	
+}
+#name{
+	width: 400px;
+	border: 30px;
+	outline: 0;
+	padding: 10px;
+	
+}
+#num{
+	width: 400px;
+	padding: 10px;
+	border: 10px;
+	outline: 0;
+}
+#sub{
+	width: 200px;
+	padding: 7px;
+	font-size: 16px;
+	font-family: san-serif;
+	font-weight: 600;
+	border: none;
+	border-radius: 10px;
+	outline: 0;
+	
+}
+ .menu-bar 
+  {
+	  background: rgb(0,0,139);
+	  text-align: center;
+  }
+  .menu-bar ul
+  {
+	  display: inline-flex;
+	  list-style: none;
+	  color: #fff;
+  }
+  .menu-bar ul li
+  {
+	  width: 120px;
+	  margin: 1px;
+	  padding: 15px;
+  }
+  .menu-bar ul li a
+  {
+	  text-decoration: none;
+	  color: #fff;
+  }
+  .active, .menu-bar ul li a:hover
+  {
+	  background: #2196F3;
+	  border-radius: 3px;
+	  
+  }
+  .menu-bar .fa
+  {
+	  margin-right: 8px;
+  }
+  
+  .sub-menu-1
+  {
+	  display: none;
+	  
+  }
+  .menu-bar ul li:hover .sub-menu-1 
+  {
+	  display: block;
+	  position: absolute;
+	  background: rgb(0,0,139);
+	  margin-top: 15px;
+	  margin-left: -15px;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul
+  {
+	  display: block;
+	  margin: 10px;
+	 
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li
+  {
+	  width: 150px;
+	  padding: 10px;
+	  border-bottom: 1px dotted #fff;
+	  background: transparent;
+	  border-radius: 0;
+	  text-align: left;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+  {
+	  border-bottom: none;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+  {
+	  color: #48D1CC;
+	  
+  }
+  .fa-angle-right
+  {
+	  float: right;
+  }
+  .sub-menu-2
+  {
+	  display: none;
+  }
+  .hover-me:hover .sub-menu-2
+  {
+	  position: absolute;
+	  display: block;
+	  margin-top: -40px;
+	  margin-left: 140px;
+	  background: rgb(0,0,139);
+  }
+
+
+FORGOT PASSWORD(HTML)
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Forgot Password</title>
+   <link rel="stylesheet" type="text/css" href="forgotpassword.css">
+   <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+   <body>
+      <div class="menu-bar">
+<ul>
+<li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href= "#">Health Info</a></li>
+<li><a href= "#">Medical Staff</a>
+    <div class="sub-menu-1">
+	  <ul>
+	     <li class="hover-me"><a href="#">Nurse</a></i class="fa fa-angle-right"></i>
+		   <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Information</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		 <li class="hover-me"><a href="#">Doctor</a></i class=" fa fa-angle-right"></i>
+		  <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Treatment</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		
+		 <li><a href="#">View Health Information</a></li>  
+		 
+	  </ul>
+	</div>
+	</li>
+		 
+<li><a href= "#">Patients</a>
+      <div class= "sub-menu-1">
+	  <ul>
+		 <li><a href="#">Profile</a></li>  
+		 <li><a href="#">View Health Information</a></li>  
+	  </ul>
+	</div>
+	</li>
+   
+<li class="active"><a href= "register.html">Register</a></li>
+<li><a href= "Login.html"><i class="fa fa-user"></i>Login</a></li>
+
+</ul>
+</div>
+
+
+<div class="form-container">
+    <form action="#" method="POST" class="form-wrap">
+	   <h2>Forgot Password</h2>
+	   <div class="form-box">
+	      <input type="text" placeholder="Enter Email"/>
+		  </div>
+		  <div class="form-submit">
+		     <input type="submit" value="send"/>
+		  
+	   
+	   
+	
+	   </div>
+	   </form>
+	   </div>
+
+	 
+	   
+       
+
+</body>
+ </html>
+
+(CSS)
+
+*
+{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	
+}
+body{
+	background: #fff;
+	
+}
+.form-container{
+	display: flex;
+	height: 98vh;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	
+}
+.form-container .form-wrap
+{
+	background:#2d85b0 ;
+	width: 40%;
+	padding: 15px 20px;
+	
+}
+.form-container .form-wrap h2{
+	text-align: center;
+	margin: 0px 0px 20px;
+	font-size: 20px;
+	
+}
+.form-container .form-wrap .form-box{
+	margin: 0px 0px 15px;
+}
+.form-container .form-wrap .form-box input[type="text"] {
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 1px solid #353535;
+	width: 100%;
+}
+.form-container .form-wrap .form-submit{
+	display: flex;
+	justify-content: center;
+	
+}
+
+.form-container .form-wrap .form-submit input[type="submit"]{
+	padding: 4px 10px;
+	border: none;
+	border-radius: 2px;
+	background: #353535;
+	color: #fff;
+	font-weight: 800;
+	cursor: pointer;
+	font-size: 16px;
+	
+}
+ .menu-bar 
+  {
+	  background: rgb(0,0,139);
+	  text-align: center;
+  }
+  .menu-bar ul
+  {
+	  display: inline-flex;
+	  list-style: none;
+	  color: #fff;
+  }
+  .menu-bar ul li
+  {
+	  width: 120px;
+	  margin: 1px;
+	  padding: 15px;
+  }
+  .menu-bar ul li a
+  {
+	  text-decoration: none;
+	  color: #fff;
+  }
+  .active, .menu-bar ul li a:hover
+  {
+	  background: #2196F3;
+	  border-radius: 3px;
+	  
+  }
+  .menu-bar .fa
+  {
+	  margin-right: 8px;
+  }
+  
+  .sub-menu-1
+  {
+	  display: none;
+	  
+  }
+  .menu-bar ul li:hover .sub-menu-1 
+  {
+	  display: block;
+	  position: absolute;
+	  background: rgb(0,0,139);
+	  margin-top: 15px;
+	  margin-left: -15px;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul
+  {
+	  display: block;
+	  margin: 10px;
+	 
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li
+  {
+	  width: 150px;
+	  padding: 10px;
+	  border-bottom: 1px dotted #fff;
+	  background: transparent;
+	  border-radius: 0;
+	  text-align: left;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+  {
+	  border-bottom: none;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+  {
+	  color: #48D1CC;
+	  
+  }
+  .fa-angle-right
+  {
+	  float: right;
+  }
+  .sub-menu-2
+  {
+	  display: none;
+  }
+  .hover-me:hover .sub-menu-2
+  {
+	  position: absolute;
+	  display: block;
+	  margin-top: -40px;
+	  margin-left: 140px;
+	  background: rgb(0,0,139);
+  }
+
+
+PATIENT INFORMATION(HTML)
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Patient Information Form</title>
+   <link rel="stylesheet" type="text/css" href="patientinformation.css">
+   <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+   <body>
+    <div class="menu-bar">
+<ul>
+<li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href= "#">Health Info</a></li>
+<li><a href= "#">Medical Staff</a>
+    <div class="sub-menu-1">
+	  <ul>
+	     <li class="hover-me"><a href="#">Nurse</a></i class="fa fa-angle-right"></i>
+		   <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Information</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		 <li class="hover-me"><a href="#">Doctor</a></i class=" fa fa-angle-right"></i>
+		  <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Treatment</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		
+		 <li><a href="#">View Health Information</a></li>  
+		 
+	  </ul>
+	</div>
+	</li>
+		 
+<li><a href= "#">Patients</a>
+      <div class= "sub-menu-1">
+	  <ul>
+		 <li><a href="#">Profile</a></li>  
+		 <li><a href="#">View Health Information</a></li>  
+	  </ul>
+	</div>
+	</li>
+   
+<li class=""><a href= "register.html">Register</a></li>
+<li><a href= "Login.html"><i class="fa fa-user"></i>Login</a></li>
+
+</ul>
+</div>
+<br>
+<br>
+<br>
+	
+	
+	
+	
+	<div class="patientinformation">
+	  <h2>Patient Information Form</h2>
+	<form method="post" id="patientinformation" action="">
+	
+		<label> PatientID   :</label><br>
+		<input type="string" name="PatientID" id="name" placeholder="Enter PatientID"><br><br>
+		<label> Name        :</label><br>
+		<input type="text" name="Name" id="name" placeholder="Enter Name"><br><br>
+		<label> IC Number   :</label><br>
+		<input type="number" name="IC Number" id="name" placeholder="Enter IC Number"><br><br>
+		<label>Phone Number :</label><br>
+		<input type="number" name="Phone Number" id="num" placeholder="Enter Phone Number"><br><br>
+		<label> Gender      :</label><br>
+		<input type="text" name="Gender" id="name" placeholder="Enter gender"><br><br>
+		<label> Races       :</label><br>
+		<input type="text" name="Races" id="name" placeholder="Enter Races"><br><br>
+		<label> Address      :</label><br>
+		<textarea name ="Address" rows="5" cols="55"></textarea><br><br>
+		<label> BirthDate       :</label><br>
+		<input type="date" name="Birthdate" id="name" placeholder="Enter BirthDate"><br><br>
+		
+		<input type="submit" name="" value="Save" id="sub">
+	</form>
+	</div>
+	
+   
+   
+   </body>
+ </html>
+
+(CSS)
+
+*
+{
+	margin: 0;
+	padding: 0;
+	
+}
+body{
+	background-image: url(whitebackground.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+h2{
+	text-align: center;
+	padding: 20px;
+	
+}
+
+.patientinformation{
+	  background: #2d85b0;
+	width: 500px;
+	margin: 0px 0px 0px 430px;
+	color: white;
+	font-size: 18px;
+	    padding: 20px;
+    border-radius: 10px;
+
+	
+}
+
+#patientinformation{
+	margin-left: 50px;
+}
+
+label{
+	color: white;
+	font-family: san-serif;
+	font-size: 18px;
+	
+	
+}
+#name{
+	width: 400px;
+	border: 30px;
+	outline: 0;
+	padding: 10px;
+	
+}
+#num{
+	width: 400px;
+	padding: 10px;
+	border: 30px;
+	
+	outline: 0;
+}
+#sub{
+	width: 200px;
+	padding: 7px;
+	font-size: 16px;
+	font-family: san-serif;
+	font-weight: 600;
+	border: none;
+	border-radius: 3px;
+	outline: 0;
+}
+ .menu-bar 
+  {
+	  background: rgb(0,0,139);
+	  text-align: center;
+  }
+  .menu-bar ul
+  {
+	  display: inline-flex;
+	  list-style: none;
+	  color: #fff;
+  }
+  .menu-bar ul li
+  {
+	  width: 120px;
+	  margin: 1px;
+	  padding: 15px;
+  }
+  .menu-bar ul li a
+  {
+	  text-decoration: none;
+	  color: #fff;
+  }
+  .active, .menu-bar ul li a:hover
+  {
+	  background: #2196F3;
+	  border-radius: 3px;
+	  
+  }
+  .menu-bar .fa
+  {
+	  margin-right: 8px;
+  }
+  
+  .sub-menu-1
+  {
+	  display: none;
+	  
+  }
+  .menu-bar ul li:hover .sub-menu-1 
+  {
+	  display: block;
+	  position: absolute;
+	  background: rgb(0,0,139);
+	  margin-top: 15px;
+	  margin-left: -15px;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul
+  {
+	  display: block;
+	  margin: 10px;
+	 
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li
+  {
+	  width: 150px;
+	  padding: 10px;
+	  border-bottom: 1px dotted #fff;
+	  background: transparent;
+	  border-radius: 0;
+	  text-align: left;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+  {
+	  border-bottom: none;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+  {
+	  color: #48D1CC;
+	  
+  }
+  .fa-angle-right
+  {
+	  float: right;
+  }
+  .sub-menu-2
+  {
+	  display: none;
+  }
+  .hover-me:hover .sub-menu-2
+  {
+	  position: absolute;
+	  display: block;
+	  margin-top: -40px;
+	  margin-left: 140px;
+	  background: rgb(0,0,139);
+  }
+
+
+PATIENT TREATMENT (HTML)
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Patient Treatment Form</title>
+   <link rel="stylesheet" type="text/css" href="stylepatienttreatment.css">
+   <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+   <body>
+    <div class="menu-bar">
+<ul>
+<li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href= "#">Health Info</a></li>
+<li><a href= "#">Medical Staff</a>
+    <div class="sub-menu-1">
+	  <ul>
+	     <li class="hover-me"><a href="#">Nurse</a></i class="fa fa-angle-right"></i>
+		   <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Information</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		 <li class="hover-me"><a href="#">Doctor</a></i class=" fa fa-angle-right"></i>
+		  <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Treatment</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		
+		 <li><a href="#">View Health Information</a></li>  
+		 
+	  </ul>
+	</div>
+	</li>
+		 
+<li><a href= "#">Patients</a>
+      <div class= "sub-menu-1">
+	  <ul>
+		 <li><a href="#">Profile</a></li>  
+		 <li><a href="#">View Health Information</a></li>  
+	  </ul>
+	</div>
+	</li>
+   
+<li class=""><a href= "register.html">Register</a></li>
+<li><a href= "Login.html"><i class="fa fa-user"></i>Login</a></li>
+
+</ul>
+</div>
+<br>
+<br>
+<br>
+	
+	
+	<div class="patienttreatment">
+	  <h2>Patient Treatment Form</h2>
+	<form method="post" id="patienttreatment" action="">
+	
+		<label> PatientID   :</label><br>
+		<input type="string" name="PatientID" id="name" placeholder=""><br><br>
+		<label> Diagnosis        :</label><br>
+		<input type="text" name="Name" id="name" placeholder=""><br><br>
+		<label> Symptom   :</label><br>
+		<input type="text" name="Symptom" id="name" placeholder=""><br><br>
+		<label> Clinical Finding :</label><br>
+		<input type="text" name="Clinical Finding" id="name" placeholder=""><br><br>
+		<label> Investigation    :</label><br>
+		<input type="text" name="Investigation" id="name" placeholder=""><br><br>
+		<label> Treatment      :</label><br>
+		<input type="text" name="Treatment" id="name" placeholder=""><br><br>
+		
+		
+		<input type="submit" name="" value="Save" id="sub"><br><br>
+		
+		
+	</form>
+	</div>
+	
+   
+   
+   </body>
+ </html>
+
+(CSS)
+*
+{
+	margin: 0;
+	padding: 0;
+	
+}
+body{
+	background-image: url(whitebackground.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+h2{
+	text-align: center;
+	padding: 20px;
+	
+}
+
+.patienttreatment{
+	  background: #2d85b0;
+	width: 500px;
+	margin: 0px 0px 0px 430px;
+	color: white;
+	font-size: 18px;
+	    padding: 20px;
+    border-radius: 10px;
+
+	
+}
+
+#patienttreatment{
+	margin-left: 50px;
+}
+
+label{
+	color: white;
+	font-family: san-serif;
+	font-size: 18px;
+	
+	
+}
+#name{
+	width: 400px;
+	border: 30px;
+	outline: 0;
+	padding: 10px;
+	
+}
+#num{
+	width: 400px;
+	padding: 10px;
+	border: 30px;
+	
+	outline: 0;
+}
+#sub{
+	width: 200px;
+	padding: 7px;
+	font-size: 16px;
+	font-family: san-serif;
+	font-weight: 600;
+	border: none;
+	border-radius: 3px;
+	outline: 0;
+}
+ .menu-bar 
+  {
+	  background: rgb(0,0,139);
+	  text-align: center;
+  }
+  .menu-bar ul
+  {
+	  display: inline-flex;
+	  list-style: none;
+	  color: #fff;
+  }
+  .menu-bar ul li
+  {
+	  width: 120px;
+	  margin: 1px;
+	  padding: 15px;
+  }
+  .menu-bar ul li a
+  {
+	  text-decoration: none;
+	  color: #fff;
+  }
+  .active, .menu-bar ul li a:hover
+  {
+	  background: #2196F3;
+	  border-radius: 3px;
+	  
+  }
+  .menu-bar .fa
+  {
+	  margin-right: 8px;
+  }
+  
+  .sub-menu-1
+  {
+	  display: none;
+	  
+  }
+  .menu-bar ul li:hover .sub-menu-1 
+  {
+	  display: block;
+	  position: absolute;
+	  background: rgb(0,0,139);
+	  margin-top: 15px;
+	  margin-left: -15px;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul
+  {
+	  display: block;
+	  margin: 10px;
+	 
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li
+  {
+	  width: 150px;
+	  padding: 10px;
+	  border-bottom: 1px dotted #fff;
+	  background: transparent;
+	  border-radius: 0;
+	  text-align: left;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+  {
+	  border-bottom: none;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+  {
+	  color: #48D1CC;
+	  
+  }
+  .fa-angle-right
+  {
+	  float: right;
+  }
+  .sub-menu-2
+  {
+	  display: none;
+  }
+  .hover-me:hover .sub-menu-2
+  {
+	  position: absolute;
+	  display: block;
+	  margin-top: -40px;
+	  margin-left: 140px;
+	  background: rgb(0,0,139);
+  }
+
+
+PATIENT MEDICINE (HTML)
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Patient Medicine Form</title>
+   <link rel="stylesheet" type="text/css" href="stylepatientmedicine.css">
+   <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+   <body>
+    <div class="menu-bar">
+<ul>
+<li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href= "#">Health Info</a></li>
+<li><a href= "#">Medical Staff</a>
+    <div class="sub-menu-1">
+	  <ul>
+	     <li class="hover-me"><a href="#">Nurse</a></i class="fa fa-angle-right"></i>
+		   <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Information</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		 <li class="hover-me"><a href="#">Doctor</a></i class=" fa fa-angle-right"></i>
+		  <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Treatment</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		
+		 <li><a href="#">View Health Information</a></li>  
+		 
+	  </ul>
+	</div>
+	</li>
+		 
+<li><a href= "#">Patients</a>
+      <div class= "sub-menu-1">
+	  <ul>
+		 <li><a href="#">Profile</a></li>  
+		 <li><a href="#">View Health Information</a></li>  
+	  </ul>
+	</div>
+	</li>
+   
+<li class=""><a href= "register.html">Register</a></li>
+<li><a href= "Login.html"><i class="fa fa-user"></i>Login</a></li>
+
+</ul>
+</div>
+<br>
+<br>
+<br>
+	
+	
+	<div class="patientmedicine">
+	  <h2>Patient Medicine Form</h2>
+	<form method="post" id="patientmedicine" action="">
+	
+		<label> PatientID   :</label><br>
+		<input type="string" name="PatientID" id="name" placeholder=""><br><br>
+		<label> Name of Medicine        :</label><br>
+		<input type="text" name="Name of Medicine" id="name" placeholder=""><br><br>
+		<label> Dos   :</label><br>
+		<input type="string" name="Dos" id="name" placeholder=""><br><br>
+		<label> Frequency :</label><br>
+		<input type="string" name="Frequency" id="name" placeholder=""><br><br>
+		<label> Duration   :</label><br>
+		<input type="string" name="Duration" id="name" placeholder=""><br><br>
+		
+		
+		
+		<input type="submit" name="" value="Save" id="sub"><br><br>
+		
+		
+	</form>
+	</div>
+	
+   
+   
+   </body>
+ </html>
+
+(CSS)
+*
+{
+	margin: 0;
+	padding: 0;
+	
+}
+body{
+	background-image: url(whitebackground.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+h2{
+	text-align: center;
+	padding: 20px;
+	
+}
+
+.patientmedicine{
+	  background: #2d85b0;
+	width: 500px;
+	margin: 0px 0px 0px 430px;
+	color: white;
+	font-size: 18px;
+	    padding: 20px;
+    border-radius: 10px;
+
+	
+}
+
+#patientmedicine{
+	margin-left: 50px;
+}
+
+label{
+	color: white;
+	font-family: san-serif;
+	font-size: 18px;
+	
+	
+}
+#name{
+	width: 400px;
+	border: 30px;
+	outline: 0;
+	padding: 10px;
+	
+}
+#num{
+	width: 400px;
+	padding: 10px;
+	border: 30px;
+	
+	outline: 0;
+}
+#sub{
+	width: 200px;
+	padding: 7px;
+	font-size: 16px;
+	font-family: san-serif;
+	font-weight: 600;
+	border: none;
+	border-radius: 3px;
+	outline: 0;
+}
+ .menu-bar 
+  {
+	  background: rgb(0,0,139);
+	  text-align: center;
+  }
+  .menu-bar ul
+  {
+	  display: inline-flex;
+	  list-style: none;
+	  color: #fff;
+  }
+  .menu-bar ul li
+  {
+	  width: 120px;
+	  margin: 1px;
+	  padding: 15px;
+  }
+  .menu-bar ul li a
+  {
+	  text-decoration: none;
+	  color: #fff;
+  }
+  .active, .menu-bar ul li a:hover
+  {
+	  background: #2196F3;
+	  border-radius: 3px;
+	  
+  }
+  .menu-bar .fa
+  {
+	  margin-right: 8px;
+  }
+  
+  .sub-menu-1
+  {
+	  display: none;
+	  
+  }
+  .menu-bar ul li:hover .sub-menu-1 
+  {
+	  display: block;
+	  position: absolute;
+	  background: rgb(0,0,139);
+	  margin-top: 15px;
+	  margin-left: -15px;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul
+  {
+	  display: block;
+	  margin: 10px;
+	 
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li
+  {
+	  width: 150px;
+	  padding: 10px;
+	  border-bottom: 1px dotted #fff;
+	  background: transparent;
+	  border-radius: 0;
+	  text-align: left;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+  {
+	  border-bottom: none;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+  {
+	  color: #48D1CC;
+	  
+  }
+  .fa-angle-right
+  {
+	  float: right;
+  }
+  .sub-menu-2
+  {
+	  display: none;
+  }
+  .hover-me:hover .sub-menu-2
+  {
+	  position: absolute;
+	  display: block;
+	  margin-top: -40px;
+	  margin-left: 140px;
+	  background: rgb(0,0,139);
+  }
+
+
+HEALTH INFO(HTML)
+<html>
+<head>
+<title>Health Info </title>
+<link rel="stylesheet" href= "healthinfo.css">
+<link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <div class="menu-bar">
+<ul>
+<li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
+<li class= "active" ><a href= "healthinfo.html">Health Info</a></li>
+<li><a href= "#">Medical Staff</a>
+    <div class="sub-menu-1">
+	  <ul>
+	     <li class="hover-me"><a href="#">Nurse</a></i class="fa fa-angle-right"></i>
+		   <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Information</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		 <li class="hover-me"><a href="#">Doctor</a></i class=" fa fa-angle-right"></i>
+		  <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Treatment</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		
+		 <li><a href="#">View Health Information</a></li>  
+		 
+	  </ul>
+	</div>
+	</li>
+		 
+<li><a href= "#">Patients</a>
+      <div class= "sub-menu-1">
+	  <ul>
+		 <li><a href="#">Profile</a></li>  
+		 <li><a href="#">View Health Information</a></li>  
+	  </ul>
+	</div>
+	</li>
+   
+<li><a href= "register.html">Register</a></li>
+<li><a href= "Login.html"><i class="fa fa-user"></i>Login</a></li>
+
+
+</ul>
+</div>
+<br><br><br><br><br><br>
+
+<div class="box">
+   <h2>Health Info</h2>
+   <p>A healthy lifestyle is a way of living that lowers the risk of being 
+   seriously ill or dying early. 
+   Health is not only just about avoiding disease. 
+   It is also about physical, mental and social wellbeing. 
+   When a healthy lifestyle is adopted, a more positive role model
+   is provided to other people in the family, particularly children. 
+   This booklet aims to help readers change their behaviour and improve 
+   their health in order to live healthier, longer lives.</p>
+   </div>
+   
+   <br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div align ="center">copyright NORADILLA
+</div>
+   
+
+</body>
+
+</html>
+
+(CSS)
+
+*
+{
+	padding: 0;
+	margin: 0;
+}
+  body
+  {
+	 background-image: url(whitebackground.jpg);
+	background-size: cover;
+	background-position: center;
+  }
+  .menu-bar 
+  {
+	  background: rgb(0,0,139);
+	  text-align: center;
+  }
+  .menu-bar ul
+  {
+	  display: inline-flex;
+	  list-style: none;
+	  color: #fff;
+  }
+  .menu-bar ul li
+  {
+	  width: 120px;
+	  margin: 15px;
+	  padding: 15px;
+  }
+  .menu-bar ul li a
+  {
+	  text-decoration: none;
+	  color: #fff;
+  }
+  .active, .menu-bar ul li a:hover
+  {
+	  background: #2196F3;
+	  border-radius: 3px;
+	  
+  }
+  .menu-bar .fa
+  {
+	  margin-right: 8px;
+  }
+  
+  .sub-menu-1
+  {
+	  display: none;
+	  
+  }
+  .menu-bar ul li:hover .sub-menu-1 
+  {
+	  display: block;
+	  position: absolute;
+	  background: rgb(0,0,139);
+	  margin-top: 15px;
+	  margin-left: -15px;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul
+  {
+	  display: block;
+	  margin: 10px;
+	 
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li
+  {
+	  width: 150px;
+	  padding: 10px;
+	  border-bottom: 1px dotted #fff;
+	  background: transparent;
+	  border-radius: 0;
+	  text-align: left;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+  {
+	  border-bottom: none;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+  {
+	  color: #48D1CC;
+	  
+  }
+  .fa-angle-right
+  {
+	  float: right;
+  }
+  .sub-menu-2
+  {
+	  display: none;
+  }
+  .hover-me:hover .sub-menu-2
+  {
+	  position: absolute;
+	  display: block;
+	  margin-top: -40px;
+	  margin-left: 140px;
+	  background: rgb(0,0,139);
+  }
+  .box{
+	  background: #2d85b0;
+	width: 500px;
+	margin: 0px 0px 0px 430px;
+	color: white;
+	font-size: 18px;
+	    padding: 20px;
+    border-radius: 10px;
+  }
+  
+
+h2{
+	text-align: center;
+	padding: 20px;
+	
+}
+p{
+	text-align: center;
+	padding: 20px;
+	
+}
+ 
+

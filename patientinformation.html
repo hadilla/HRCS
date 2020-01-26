@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Patient Information Form</title>
+   <link rel="stylesheet" type="text/css" href="CSS/patientinformation.css">
+   <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+   <body>
+    <div class="menu-bar">
+<ul>
+<li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href= "#">Health Info</a></li>
+<li><a href= "#">Medical Staff</a>
+    <div class="sub-menu-1">
+	  <ul>
+	     <li class="hover-me"><a href="#">Nurse</a></i class="fa fa-angle-right"></i>
+		   <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Information</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		 <li class="hover-me"><a href="#">Doctor</a></i class=" fa fa-angle-right"></i>
+		  <div class="sub-menu-2">
+		   <ul>
+		      <li><a href="#">Manage Patient Treatment</a></li>
+			   <li><a href="#">Manage Patient Medicine</a></li>
+		   </ul>
+		   </div>
+		 </li>
+		
+		 <li><a href="#">View Health Information</a></li>  
+		 
+	  </ul>
+	</div>
+	</li>
+		 
+<li><a href= "#">Patients</a>
+      <div class= "sub-menu-1">
+	  <ul>
+		 <li><a href="#">Profile</a></li>  
+		 <li><a href="#">View Health Information</a></li>  
+	  </ul>
+	</div>
+	</li>
+   
+<li class=""><a href= "register.html">Register</a></li>
+<li><a href= "Login.html"><i class="fa fa-user"></i>Login</a></li>
+
+</ul>
+</div>
+<br>
+<br>
+<br>
+	
+	
+	
+	
+	<div class="patientinformation">
+	  <h2>Patient Information Form</h2>
+	<form method="post" id="patientinformation" action="">
+	
+		<label> PatientID   :</label><br>
+		<input type="string" name="PatientID" id="name" placeholder="Enter PatientID"><br><br>
+		<label> Name        :</label><br>
+		<input type="text" name="Name" id="name" placeholder="Enter Name"><br><br>
+		<label> IC Number   :</label><br>
+		<input type="number" name="IC Number" id="name" placeholder="Enter IC Number"><br><br>
+		<label>Phone Number :</label><br>
+		<input type="number" name="Phone Number" id="num" placeholder="Enter Phone Number"><br><br>
+		<label> Gender      :</label><br>
+		<input type="text" name="Gender" id="name" placeholder="Enter gender"><br><br>
+		<label> Races       :</label><br>
+		<input type="text" name="Races" id="name" placeholder="Enter Races"><br><br>
+		<label> Address      :</label><br>
+		<textarea name ="Address" rows="5" cols="55"></textarea><br><br>
+		<label> BirthDate       :</label><br>
+		<input type="date" name="Birthdate" id="name" placeholder="Enter BirthDate"><br><br>
+		
+		<input type="submit" name="" value="Save" id="sub">
+	</form>
+	</div>
+	
+   
+   
+   </body>
+ </html>
