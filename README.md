@@ -1,0 +1,2 @@
+# HRCS
+hospital management system
