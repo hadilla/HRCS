@@ -1,0 +1,154 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	
+}
+body{
+	background-image: url(../images/whitebackground.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+h2{
+	text-align: center;
+	padding: 20px;
+	
+}
+
+.patientinformation{
+	  background: #2d85b0;
+	width: 500px;
+	margin: 0px 0px 0px 430px;
+	color: white;
+	font-size: 18px;
+	    padding: 20px;
+    border-radius: 10px;
+
+	
+}
+
+#patientinformation{
+	margin-left: 50px;
+}
+
+label{
+	color: white;
+	font-family: san-serif;
+	font-size: 18px;
+	
+	
+}
+#name{
+	width: 400px;
+	border: 30px;
+	outline: 0;
+	padding: 10px;
+	
+}
+#num{
+	width: 400px;
+	padding: 10px;
+	border: 30px;
+	
+	outline: 0;
+}
+#sub{
+	width: 200px;
+	padding: 7px;
+	font-size: 16px;
+	font-family: san-serif;
+	font-weight: 600;
+	border: none;
+	border-radius: 3px;
+	outline: 0;
+}
+ .menu-bar 
+  {
+	  background: rgb(0,0,139);
+	  text-align: center;
+  }
+  .menu-bar ul
+  {
+	  display: inline-flex;
+	  list-style: none;
+	  color: #fff;
+  }
+  .menu-bar ul li
+  {
+	  width: 120px;
+	  margin: 1px;
+	  padding: 15px;
+  }
+  .menu-bar ul li a
+  {
+	  text-decoration: none;
+	  color: #fff;
+  }
+  .active, .menu-bar ul li a:hover
+  {
+	  background: #2196F3;
+	  border-radius: 3px;
+	  
+  }
+  .menu-bar .fa
+  {
+	  margin-right: 8px;
+  }
+  
+  .sub-menu-1
+  {
+	  display: none;
+	  
+  }
+  .menu-bar ul li:hover .sub-menu-1 
+  {
+	  display: block;
+	  position: absolute;
+	  background: rgb(0,0,139);
+	  margin-top: 15px;
+	  margin-left: -15px;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul
+  {
+	  display: block;
+	  margin: 10px;
+	 
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li
+  {
+	  width: 150px;
+	  padding: 10px;
+	  border-bottom: 1px dotted #fff;
+	  background: transparent;
+	  border-radius: 0;
+	  text-align: left;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+  {
+	  border-bottom: none;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+  {
+	  color: #48D1CC;
+	  
+  }
+  .fa-angle-right
+  {
+	  float: right;
+  }
+  .sub-menu-2
+  {
+	  display: none;
+  }
+  .hover-me:hover .sub-menu-2
+  {
+	  position: absolute;
+	  display: block;
+	  margin-top: -40px;
+	  margin-left: 140px;
+	  background: rgb(0,0,139);
+  }
