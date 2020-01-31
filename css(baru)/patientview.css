@@ -1,0 +1,164 @@
+*
+{
+	padding: 0;
+	margin: 0;
+}
+  body
+  {
+	background-image: url(../images/whitebackground.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: san-serif;
+	font-size: 11pt;
+  }
+  .menu-bar 
+  {
+	  background: rgb(0,0,139);
+	  text-align: center;
+  }
+  .menu-bar ul
+  {
+	  display: inline-flex;
+	  list-style: none;
+	  color: #fff;
+  }
+  .menu-bar ul li
+  {
+	  width: 150px;
+	  margin: 1px;
+	  padding: 15px;
+  }
+  .menu-bar ul li a
+  {
+	  text-decoration: none;
+	  color: #fff;
+  }
+  .active, .menu-bar ul li a:hover
+  {
+	  background: #2196F3;
+	  border-radius: 3px;
+	  
+  }
+  .menu-bar .fa
+  {
+	  margin-right: 10px;
+  }
+  
+  .sub-menu-1
+  {
+	  display: none;
+	  
+  }
+  .menu-bar ul li:hover .sub-menu-1 
+  {
+	  display: block;
+	  position: absolute;
+	  background: rgb(0,0,139);
+	  margin-top: 15px;
+	  margin-left: -15px;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul
+  {
+	  display: block;
+	  margin: 10px;
+	 
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li
+  {
+	  width: 150px;
+	  padding: 10px;
+	  border-bottom: 1px dotted #fff;
+	  background: transparent;
+	  border-radius: 0;
+	  text-align: left;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+  {
+	  border-bottom: none;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+  {
+	  color: #48D1CC;
+	  
+  }
+  .fa-angle-right
+  {
+	  float: right;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  h1{
+	text-align: center;
+	padding: 20px;
+	
+}
+
+.patientview{
+	
+	  
+	width: 500px;
+	margin: 0px 0px 0px 430px;
+	font-size: 18px;
+	padding: 20px;
+    
+}
+  table
+  {
+	  width: 80%;
+	  margin-left:10%; 
+      margin-right:10%;
+  }
+  
+  
+   table, th, td
+{	border: 1px solid blue;
+    border-collapse: collapse;
+	opacity: 0.95;
+	
+}
+
+th, td
+{
+	padding: 10px;
+	text-align: center;
+	
+}
+
+th
+{
+	background-color: #3498db;
+	color: white;
+	
+}
+
+tr:nth-child(even)
+{
+	background-color: #e8e8e8;
+	
+}
+tr:nth-child(odd)
+{
+	background-color: white;
+}
+
+ 
+
+	
+	
