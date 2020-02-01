@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Update Patient Information</title>
+   <link rel="stylesheet" type="text/css" href="CSS(baru)/updatepatientinformation.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+   <body>
+     <div class="menu-bar">
+     <ul>
+     
+	   <li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
+       <li><a href= "healthinfo.html">Health Info</a></li>
+       <li class="active"><a href= "nurse.html">Nurse</a>
+       <div class="sub-menu-1">
+	   <ul>
+	     <li ><a href="patientinformation.html">Manage Patient Information</a></li>
+		 <li ><a href="patientmedicine.html">Manage Patient Medicine</a></li>
+		 <li><a href="#">View Health Information</a></li>  
+		 
+	  </ul>
+	</div>
+	</li>
+	    
+     <li><a href= "homepage">Logout</a></li>
+   
+       </ul>
+       </div> 
+   
+  
+        <br>
+        <br>
+        <br>
+	
+	<div class="updatepatientinformation">
+	  <h2>Update Patient Information</h2>
+	<form method="post" id="patientinformation" action="">
+	
+		<label> PatientID   :</label><br>
+		<input type="string" name="PatientID" id="name" placeholder=""><br><br>
+		<label> Name        :</label><br>
+		<input type="string" name="Name" id="name" placeholder=""><br><br>
+		<label> IC Number   :</label><br>
+		<input type="string" name="IC Number" id="name" placeholder=""><br><br>
+		<label>Phone Number :</label><br>
+		<input type="string" name="Phone Number" id="num" placeholder=""><br><br>
+		<label> Address      :</label><br>
+		<textarea name ="Address" rows="5" cols="55"></textarea><br><br>
+		<label> Gender      :</label><br>
+		<input type="radio" name="position" value="Male" checked>Male<br>
+        <input type="radio" name="position" value="Female">Female<br><br>
+		<label> Races       :</label><br>
+		<select>
+			  <option value="Malay">Malay</option>
+              <option value="chinese">Chinese</option>
+              <option value="indian">Indian</option>
+              <option value="other">Other</option>   
+		</select><br><br>
+		<label> BirthDate       :</label><br>
+		<input type="date" name="Birthdate" id="name" placeholder="Enter BirthDate"><br><br>
+		
+		<input type="submit" name="" value="Reset" id="sub">
+		<input type="submit" name="" value="Update" id="sub"><br><br>
+		<input type="submit" name="" value="Delete" id="sub">
+	</form>
+	</div>
+	
+   
+   
+   </body>
+ </html>
