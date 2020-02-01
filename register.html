@@ -2,7 +2,7 @@
 <html>
 <head>
    <title>Registration Form</title>
-   <link rel="stylesheet" type="text/css" href="CSS/styleregister.css">
+   <link rel="stylesheet" type="text/css" href="Css(baru)/styleregister.css">
    <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    
 </head>
@@ -10,7 +10,7 @@
     <div class="menu-bar">
 <ul>
 <li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
-<li><a href= "healthinfo">Health Info</a></li>
+<li><a href= "healthinfo.html">Health Info</a></li>
 <li><a href= "#">Medical Staff</a>
     <div class="sub-menu-1">
 	  <ul>
@@ -62,28 +62,29 @@
 	  <h2>Register Form</h2>
 	<form method="post" id="register" action="">
 	
-		<label> Username  :</label><br>
-		<input type="text" name="Username" id="name" placeholder="Enter Username"><br><br>
-		<label> Password  :</label><br>
-		<input type="password" name="Password" id="name" placeholder="Enter Password"><br><br>
-		<label> Position  :</label><br>
-		<input type="text" name="Position" id="name" placeholder="Enter Position"><br><br>
-		<label> IC Number :</label><br>
-		<input type="number" name="IC Number" id="num" placeholder="Enter IC Number"><br><br>
-		<label> Address   :</label><br>
-		<textarea name ="Address" rows="5" cols="55"></textarea><br><br>
-		<label> Email     :</label><br>
-		<input type="email" name="Email" id="name" placeholder="Enter Email"><br><br>
-		
-		
-		
-		
+		<label> StaffID  :</label><br>
+		<input type="string" name="StaffID" id="name" placeholder=""><br><br>
+		<label> Fullname :</label><br>
+		<input type="string" name="Fullname" id="name" placeholder=""><br><br>
+		<label> Username :</label><br>
+		<input type="string" name="Username" id="name" placeholder=""><br><br>
+		<label> Password :</label><br>
+		<input type="string" name="Password" id="name" placeholder=""><br><br>		   
+		<label> IC Number     :</label><br>
+		<input type="string" name="IC Number" id="name" placeholder=""><br><br>
+		<label> Phone Number     :</label><br>
+		<input type="string" name="Phone Number" id="name" placeholder=""><br><br>
+		<label> Email    :</label><br>
+		<input type="string" name="Email" id="name" placeholder=""><br><br>
+		<label>Position  :</label><br>
+       <input type="radio" name="position" value="Doctor" checked> Doctor<br>
+       <input type="radio" name="position" value="Nurse"> Nurse<br>
+  
 		<br>
-		<input type="submit" name="" value="REGISTER" id="sub">
+		<input type="submit" name="" value="Reset" id="sub">
+		<input type="submit" name="" value="Register" id="sub">
 	</form>
 	</div>
-	<br></br>
-	<br></br>
 	
    
    
