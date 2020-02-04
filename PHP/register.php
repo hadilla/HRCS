@@ -50,7 +50,15 @@ if (!empty($staffid) || !empty($fullname) || !empty($usernameR) || !empty($passw
                 $stmt = $con->prepare($INSERT);
                 $stmt->bind_param("ssssssss", $staffid, $usernameR, $passwordR, $position, $icNumber,  $email, $fullname, $phoneNumber); // yg ssss banyak2 tu sebab s tu menandakan value yang store dlm database adalah string
                 $stmt->execute();
-                echo "Success to register"; // yang ni nak test ja, kalau taknak dia muncul another page yg tunjuk success ni, buat success pop out guns javascript, boleh cari dalam online
+                ?>   <!-- kena tutup dulu php sebab utk alert ni kena masuk language html dan javascript-->
+                <script type="text/javascript">
+                    alert("Success to register");  //popup
+                    history.go(-1);  //dari register.php dia akan patah balik ke register.html
+                    window.location.href="register.html";  //dia bukak balik register.html
+                </script>
+                <?php  //bukak balik php
+
+                //echo "Success to register"; // yang ni nak test ja, kalau taknak dia muncul another page yg tunjuk success ni, buat success pop out guns javascript, boleh cari dalam online
             } 
             else 
             {
