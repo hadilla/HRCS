@@ -1,6 +1,3 @@
-# HRCS
-HEALTH REPORT CARD SYSTEM
-
 ### Reference
 
 1. https://css-tricks.com/almanac/properties/b/background-image/
