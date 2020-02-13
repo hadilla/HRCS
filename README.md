@@ -11,6 +11,7 @@
 
 1. https://stackoverflow.com/questions/14781051/php-mysqi-bind-param-number-of-variables-doesnt-match-number-of-parameters-in-p
 2. https://stackoverflow.com/questions/35132451/call-to-a-member-function-execute-on-boolean-in/35132625
+3. https://stackoverflow.com/questions/471800/how-i-do-to-force-the-browser-to-not-store-the-html-form-field-data
 
 
 ### Reference from youtube
