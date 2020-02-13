@@ -1,82 +1,155 @@
 <?php
 
-$staffid = $_POST['StaffID'];    //StaffID ni dia amik dari name="StaffID"
-$fullname = $_POST['Fullname'];   //semua name yang dalam array
+$staffid = $_POST['StaffID'];    
+$fullname = $_POST['Fullname'];   
 $usernameR = $_POST['Username'];
 $passwordR = $_POST['Password'];
 $icNumber = $_POST['IC_Number'];
 $phoneNumber = $_POST['Phone_Number'];
 $email = $_POST['Email'];
-$position = $_POST['position'];
+$position = $_POST['Position'];
 
+//if (empty($staffid) && empty($fullname)  && empty($usernameR)  && empty($passwordR)  && empty($icNumber)  && empty($phoneNumber)  && empty($email)  && empty($position)) 
 
-if (!empty($staffid) || !empty($fullname) || !empty($usernameR) || !empty($passwordR) || !empty($icNumber) || !empty($phoneNumber) || !empty($email) || !empty($position)) 
+if (empty($staffid) || empty($fullname) || empty($usernameR) || empty($passwordR) || empty($icNumber) || empty($phoneNumber) || empty($email) || empty($position)) 
 {
-    //dalam phpmyadmin tu, kita set 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $db = "HRCS";  //nama database dlm phpmyadmin
-
-    // Create connection
-    $con = mysqli_connect($servername, $username, $password,$db);
-
-    // Check connection
-    if (!$con) 
-    {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    else
-    {
-        if ($position=="Doctor")
-        {
-            $SELECT = "SELECT STAFF_ID FROM doctor_register WHERE STAFF_ID = ? LIMIT 1";
-            //$INSERT = "INSERT INTO doctor_register(STAFF_ID, USERNAME, PASSWORDS, POSITION, IC_NUM, EMAIL, FULLNAME, PHONE_NUM) values($staffid, $usernameR, $passwordR, $position, $icNumber, $email, $fullname, $phoneNumber)";
-            $INSERT = "INSERT INTO doctor_register(STAFF_ID, USERNAME, PASSWORDS, POSITION, IC_NUM, EMAIL, FULLNAME, PHONE_NUM) values(?,?,?,?,?,?,?,?)";
-
-            //Prepare statement
-            //$stmt = $con->prepare("SELECT STAFF_ID FROM doctor_register WHERE STAFF_ID = $staffid LIMIT 1");
-            $stmt = $con->prepare($SELECT);
-            $stmt->bind_param("s", $staffid);
-            $stmt->execute();
-            $stmt->bind_result($staffid);
-            $stmt->store_result();
-            $rnum = $stmt->num_rows;
-     
-            if ($rnum==0) 
-            {
-                $stmt->close();
-                //$stmt = $con->prepare("INSERT INTO doctor_register(STAFF_ID, USERNAME, PASSWORDS, POSITION, IC_NUM, EMAIL, FULLNAME, PHONE_NUM) values($staffid, $usernameR, $passwordR, $position, $icNumber, $email, $fullname, $phoneNumber)");
-                $stmt = $con->prepare($INSERT);
-                $stmt->bind_param("ssssssss", $staffid, $usernameR, $passwordR, $position, $icNumber,  $email, $fullname, $phoneNumber); // yg ssss banyak2 tu sebab s tu menandakan value yang store dlm database adalah string
-                $stmt->execute();
-                ?>   <!-- kena tutup dulu php sebab utk alert ni kena masuk language html dan javascript-->
-                <script type="text/javascript">
-                    alert("Success to register");  //popup
-                    history.go(-1);  //dari register.php dia akan patah balik ke register.html
-                    window.location.href="register.html";  //dia bukak balik register.html
-                </script>
-                <?php  //bukak balik php
-
-                //echo "Success to register"; // yang ni nak test ja, kalau taknak dia muncul another page yg tunjuk success ni, buat success pop out guns javascript, boleh cari dalam online
-            } 
-            else 
-            {
-                echo "Someone already register using this Staff ID";
-            }
-            $stmt->close();
-            $con->close();
-        }
-        
-        if ($position=="Nurse")
-        {
-            //buat sebijik macam doctor yang kat atas tu, amik semua dalam if doctor dan ubah nama table nurse_register dan column sahaja
-        }
-    }
-} 
-else 
-{
-    echo "All field are required";
+    ?>   
+        <script type="text/javascript">
+            alert("All field are required"); 
+            history.go(-1);  
+            window.location.href="register.html";  
+        </script>
+    <?php  
+    //echo "All field are required";
     die();
+}
+else
+{
+    if (!empty($staffid) || !empty($fullname) || !empty($usernameR) || !empty($passwordR) || !empty($icNumber) || !empty($phoneNumber) || !empty($email) || !empty($position)) 
+    {
+    
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $db = "HRCS";  
+
+    
+        $con = mysqli_connect($servername, $username, $password,$db);
+
+    
+        if (!$con) 
+        {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        else
+        {
+            if ($position=="Doctor")
+            {
+                $SELECT = "SELECT StaffID FROM doctor_register WHERE StaffID = ? LIMIT 1";
+                //$INSERT = "INSERT INTO doctor_register(StaffID, Fullname, Username, Password, IC_Num, Phone_Num, Email, Position) values($staffid, $fullname, $usernameR, $passwordR, $icNumber, $phoneNumber, $email, $position)";
+                $INSERT = "INSERT INTO doctor_register(StaffID, Fullname, Username, Password, IC_Num, Phone_Num, Email, Position) values(?,?,?,?,?,?,?,?)";
+
+                //Prepare statement
+                //$stmt = $con->prepare("SELECT StaffID FROM doctor_register WHERE StaffID = $staffid LIMIT 1");
+                $stmt = $con->prepare($SELECT);
+                $stmt->bind_param("s", $staffid);
+                $stmt->execute();
+                $stmt->bind_result($staffid);
+                $stmt->store_result();
+                $rnum = $stmt->num_rows;
+        
+                if ($rnum==0)
+                {
+                    $stmt->close();
+                    //$stmt = $con->prepare("INSERT INTO doctor_register (StaffID, Fullname, Username, Password, IC_Num, Phone_Num, Email, Position) values($staffid, $fullname, $usernameR, $passwordR, $icNumber, $phoneNumber, $email, $position)");
+                    $stmt = $con->prepare($INSERT);
+                    $stmt->bind_param("ssssiiss",$staffid, $fullname, $usernameR, $passwordR, $icNumber, $phoneNumber, $email, $position); 
+                    $stmt->execute();
+                    ?>   
+                    <script type="text/javascript">
+                        alert("Success to register"); 
+                        history.go(-1);  
+                        window.location.href="register.html";  
+                    </script>
+                    <?php  
+
+                    //echo "Success to register"; 
+                } 
+                else 
+                {
+                    ?>   
+                    <script type="text/javascript">
+                        alert("Someone already register using this Staff ID"); 
+                        history.go(-1);  
+                        window.location.href="register.html";  
+                    </script>
+                    <?php 
+                    //echo "Someone already register using this Staff ID";
+                }
+                $stmt->close();
+                $con->close();
+            }
+            
+            if ($position=="Nurse")
+            {
+                $SELECT = "SELECT StaffID FROM nurse_register WHERE StaffID = ? LIMIT 1";
+                //$INSERT = "INSERT INTO nurse_register(StaffID, Fullname, Username, Password, IC_Num, Phone_Num, Email, Position) values($staffid, $fullname, $usernameR, $passwordR, $icNumber, $phoneNumber, $email, $position)";
+                $INSERT = "INSERT INTO nurse_register(StaffID, Fullname, Username, Password, IC_Num, Phone_Num, Email, Position) values(?,?,?,?,?,?,?,?)";
+
+                //Prepare statement
+                //$stmt = $con->prepare("SELECT StaffID FROM nurse_register WHERE StaffID = $staffid LIMIT 1");
+                $stmt = $con->prepare($SELECT);
+                $stmt->bind_param("s", $staffid);
+                $stmt->execute();
+                $stmt->bind_result($staffid);
+                $stmt->store_result();
+                $rnum = $stmt->num_rows;
+        
+                if ($rnum==0) 
+                {
+                    $stmt->close();
+                    //$stmt = $con->prepare("INSERT INTO nurse_register (StaffID, Fullname, Username, Password, IC_Num, Phone_Num, Email, Position) values($staffid, $fullname, $usernameR, $passwordR, $icNumber, $phoneNumber, $email, $position)");
+                    $stmt = $con->prepare($INSERT);
+                    $stmt->bind_param("ssssiiss",$staffid, $fullname, $usernameR, $passwordR, $icNumber, $phoneNumber, $email, $position); 
+                    $stmt->execute();
+                    ?>   
+                    <script type="text/javascript">
+                        alert("Success to register"); 
+                        history.go(-1);  
+                        window.location.href="register.html";  
+                    </script>
+                    <?php  
+
+                    //echo "Success to register"; 
+                } 
+                else 
+                {
+                    ?>   
+                    <script type="text/javascript">
+                        alert("Someone already register using this Staff ID"); 
+                        history.go(-1);  
+                        window.location.href="register.html";  
+                    </script>
+                    <?php 
+                }
+                $stmt->close();
+                $con->close();
+            }
+        }
+    } 
+        
+    else if (empty($staffid) || empty($fullname) || empty($usernameR) || empty($passwordR) || empty($icNumber) || empty($phoneNumber) || empty($email) || empty($position)) 
+    //else 
+    {
+        ?>   
+            <script type="text/javascript">
+                alert("All field are required"); 
+                history.go(-1);  
+                window.location.href="register.html";  
+            </script>
+        <?php  
+        //echo "All field are required";
+        die();
+    }
 }
 ?>
