@@ -5,6 +5,9 @@
 3. https://www.codeandcourse.com/how-to-connect-html-register-form-to-mysql-database-with-php/
 4. https://www.sitepoint.com/community/t/alert-with-two-options-proceed-or-back-to-previous-page/1502
 5. https://stackoverflow.com/questions/19825283/redirect-to-a-page-url-after-alert-button-is-pressed/19825307
+6.https://www.allphptricks.com/insert-view-edit-and-delete-record-from-database-using-php-and-mysqli/
+7.https://codewithawa.com/posts/php-crud-create,-edit,-update-and-delete-posts-with-mysql-database
+
 
 
 ### Reference for error
@@ -19,3 +22,4 @@
 1. https://www.youtube.com/watch?v=qm4Eih_2p-M
 
 2. https://www.youtube.com/watch?v=IcFipb36mMU (insert update delete)
+3. https://www.youtube.com/watch?v=SlF1VNXHD1o
