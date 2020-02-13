@@ -60,28 +60,28 @@
 	
 	<div class="register">
 	  <h2>Register Form</h2>
-	<form method="POST" id="register" action="../PHP/register.php">
+	<form method="POST" id="register" autocomplete="off" action="/HRCS/PHP/register.php">
 	
 		<label> StaffID  :</label><br>
-		<input type="string" name="StaffID" id="name" placeholder=""><br><br>
+		<input type="string" name="StaffID" id="name" placeholder="" ><br><br>
 		<label> Fullname :</label><br>
 		<input type="string" name="Fullname" id="name" placeholder=""><br><br>
 		<label> Username :</label><br>
 		<input type="string" name="Username" id="name" placeholder=""><br><br>
 		<label> Password :</label><br>
-		<input type="string" name="Password" id="name" placeholder=""><br><br>		   
+		<input type="password" name="Password" id="name" placeholder=""><br><br>		   
 		<label> IC Number     :</label><br>
-		<input type="string" name="IC_Number" id="name" placeholder=""><br><br>
+		<input type="icNumber" name="IC_Number" id="name" placeholder=""><br><br>
 		<label> Phone Number     :</label><br>
-		<input type="string" name="Phone_Number" id="name" placeholder=""><br><br>
+		<input type="phoneNumber" name="Phone_Number" id="name" placeholder=""><br><br>
 		<label> Email    :</label><br>
-		<input type="string" name="Email" id="name" placeholder=""><br><br>
+		<input type="email" name="Email" id="name" placeholder=""><br><br>
 		<label>Position  :</label><br>
-       <input type="radio" name="position" value="Doctor" checked> Doctor<br>
-       <input type="radio" name="position" value="Nurse"> Nurse<br>
+       <input type="radio" name="Position" value="Doctor" checked> Doctor<br>
+       <input type="radio" name="Position" value="Nurse"> Nurse<br>
   
 		<br>
-		<input type="submit" name="" value="Reset" id="sub">
+		<input type="reset" name="" value="Reset" id="sub">
 		<input type="submit" name="" value="Register" id="sub">
 	</form>
 	</div>
@@ -89,4 +89,4 @@
    
    
    </body>
- </html>
+   </html>
