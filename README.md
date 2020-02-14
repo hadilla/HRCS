@@ -23,3 +23,7 @@
 
 2. https://www.youtube.com/watch?v=IcFipb36mMU (insert update delete)
 3. https://www.youtube.com/watch?v=SlF1VNXHD1o
+4. https://www.youtube.com/watch?v=1UA6vC3kRYQ (login php)
+5.https://www.youtube.com/watch?v=aIsu9SPcGbU 
+6. https://www.youtube.com/watch?v=arqv2YVp_3E
+7. https://www.youtube.com/watch?v=AtMqFFBiwzE
