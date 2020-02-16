@@ -1,14 +1,11 @@
+<!DOCTYPE html>
+
 <html>
 <head>
 <title>LOGIN FORM</title>
     <link rel="stylesheet" type="text/css" href="CSS(baru)/stylelogin.css">
 	<link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	
-	
-	
-	
-	
+
 </head>
 <body>
  <div class="menu-bar">
@@ -60,31 +57,28 @@
    <div class="loginbox">
    <img src="images/icon.png" class="icon">
       <h1>LOGIN HERE</h1>
-       <form>
+       <form action="/HRCS/PHP/login2.php" autocomplete="off" id = "login" method="POST">
 	       <p>Username</p>
-		   <input type= "text" name= "" placeholder="Enter Username">
+		   <input type= "text" name= "username" placeholder="Enter Username">
 		   <p>Password</p>
-		   <input type= "password" name="" placeholder="Enter Password">
+		   <input type= "password" name="password" placeholder="Enter Password">
 		   <p>User</p>
-			   <select> 
-			    <option value="Doctor">Doctor</option>
-                <option value="nurse">Nurse</option>
-                <option value="patient">Patient</option>
+			   <select name="user"> 
+			    <option name="user" value="Doctor">Doctor</option>
+                <option name="user" value="Nurse">Nurse</option>
+                <option name="user" value="Patient">Patient</option>
                 
 				</select><br><br>
 		 
 		   <input type="submit" name="" value="LOGIN">
 		   
 		   <a href="forgotpassword.html" >Forgot password</a><br>
-		   <a href= "register.html">Don't have an account?</a>
-		   	   
-	   
+		   <a href="register.html">Don't have an account?</a>
+		   	
+
       </form>	   
    </div>
-    
-   
-
 
 </body>
-
 </html>
+

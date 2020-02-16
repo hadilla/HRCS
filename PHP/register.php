@@ -31,7 +31,7 @@ else
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $db = "HRCS";  
+        $db = "HRCS";   
 
     
         $con = mysqli_connect($servername, $username, $password,$db);
