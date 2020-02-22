@@ -8,6 +8,7 @@
 6. https://www.allphptricks.com/insert-view-edit-and-delete-record-from-database-using-php-and-mysqli/
 7. https://codewithawa.com/posts/php-crud-create,-edit,-update-and-delete-posts-with-mysql-database
 8. https://www.codeproject.com/Tips/746420/Browser-Back-Button-Alert-Confirm-Message-Function
+9. https://stackoverflow.com/questions/908765/how-to-link-html-pages-in-same-or-different-folders
 
 
 
