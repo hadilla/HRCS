@@ -33,5 +33,5 @@
 
 ### net::ERR_ABORTED 404 (Not Found)
 
-Error keluar bila tidak dapat baca data atau link data menggunakan 'src' atau 'href'
+Error keluar bila tidak dapat baca data atau link data menggunakan 'src' atau 'href' apabila meletakkan code html ke dalam file .php
 1. https://teamtreehouse.com/community/encountering-a-neterraborted-error-and-404-error-when-refreshing-page-within-3-nested-routes 
