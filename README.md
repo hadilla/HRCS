@@ -29,3 +29,9 @@
 6. https://www.youtube.com/watch?v=arqv2YVp_3E
 7. https://www.youtube.com/watch?v=AtMqFFBiwzE
 8. https://www.youtube.com/watch?v=J5RHnJCy8AE
+
+
+### net::ERR_ABORTED 404 (Not Found)
+
+Error keluar bila tidak dapat baca data atau link data menggunakan 'src' atau 'href'
+1. https://teamtreehouse.com/community/encountering-a-neterraborted-error-and-404-error-when-refreshing-page-within-3-nested-routes 
