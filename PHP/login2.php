@@ -59,7 +59,7 @@
 
             if($row['Username'] == $usernameL && $row['Password'] == $passwordL)
             {
-                header("location: /HRCS/nurse.html");
+                header("location: /HRCS/nurse1.html");
             }
             else
             {
@@ -73,7 +73,7 @@
                 die();
             }
         }
-        /*if ($userL=="Patient")
+        /*if ($userL=="Patient")// nie abaikan sat,sbab user patient,xdak kat register
         {
             $result1 = mysqli_query($con,"SELECT Username, Password FROM doctor_register WHERE Username = '".$_POST['username']."' AND Password = '".$_POST['password']."'") or die ("Failed to query database" .mysql_error());
             $row = mysqli_fetch_array($result1); //dia masukkan data drpd data row yang dah dapat dalam table database

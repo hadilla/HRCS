@@ -9,7 +9,27 @@
 	background-size: cover;
 	background-position: center;
   }
-  .menu-bar 
+
+  #wrapper{
+	max-width: 1400px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 0px;
+}
+
+header{
+	background-color: #2196F3;
+	height: 50px;
+	padding: 4px;
+}
+header h1{
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	line-height: 30px;
+}
+
+.menu-bar 
   {
 	  background: rgb(0,0,139);
 	  text-align: center;
@@ -22,7 +42,7 @@
   }
   .menu-bar ul li
   {
-	  width: 150px;
+	  width: 120px;
 	  margin: 1px;
 	  padding: 15px;
   }
@@ -35,79 +55,65 @@
   {
 	  background: #2196F3;
 	  border-radius: 3px;
+	  background-color: #ee1111;
 	  
   }
-  .menu-bar .fa
+ 
+  .sub-menu-1
   {
-	  margin-right: 10px;
+	  display: none;
+	  
   }
-  
- 
-	.container{
-		text-align: center;
-		margin-top: 100px;
-	}
-	.btn{
-		border: 1px solid #3498db;
-		background: none;
-		padding: 10px 20px;
-		font-size: 20px;
-		font-family: "montserrat";
-		cursor: pointer;
-		margin: 10px;
-		transition: 0.8s;
-		position: relative;
-		overflow: hidden;
-	}
-	.btn1,.btn2{
-		color: #3498db;
-		
-	}
-	.btn1:hover,.btn2:hover{
-		color: #fff;
-		
-	}
-	.btn::before{
-		content: "";
-		position: absolute;
-		left: 0;
-		height: 0%;
-		width: 100%;
-		background: #2d85b0;
-		z-index: -1;
-		transition: 0.8s;
-		
-		
-	}
-	.btn1::before{
-		top: 0;
-		border-radius: 0 0 50% 50%;
-		
-	}
-	.btn2::before{
-		bottom: 0;
-		border-radius: 50% 50% 0 0;
-		
-	}
-	
-	 .btn1:hover::before,.btn2:hover::before{
-		  height: 180%;
-		  
-	  }
-	.patient
-	{
-		position: absolute;
-		width: 1200px;
-		margin-left: 0px;
-		margin-top: 0px;
-	}
-	h1
-	{
-		color: black;
-		text-transform: uppercase;
-		font-size: 50px;
-		text-align: center;
-		margin-top: 60px;
-		
-	}
- 
+  .menu-bar ul li:hover .sub-menu-1 
+  {
+	  display: block;
+	  position: absolute;
+	  background: rgb(0,0,139);
+	  margin-top: 15px;
+	  margin-left: -15px;
+	  
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul
+  {
+	  display: block;
+	  margin: 10px;
+	  
+	 
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li
+  {
+	  width: 150px;
+	  padding: 10px;
+	  border-bottom: 1px dotted #fff;
+	  background: transparent;
+	  border-radius: 0;
+	  text-align: left;
+	 
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+  {
+	  border-bottom: none;
+	  
+  }
+  .menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+  {
+	  background-color: #2196F3;  
+
+  }
+
+  .sub-menu-2
+  {
+	  display: none;
+  }
+  .hover-me:hover .sub-menu-2
+  {
+	  position: absolute;
+	  display: block;
+	  margin-top: -40px;
+	  margin-left: 140px;
+	  background: rgb(0,0,139);
+  }
+
+

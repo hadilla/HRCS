@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Patient Medicine Form</title>
+   <link rel="stylesheet" type="text/css" href="css(baru)/displaypatientmedicine.css">
+  
+   
+</head>
+   <body>
+	<div id="wrapper">
+        <header>
+            <h1>HEALTH REPORT CARD SYSTEM</h1>
+		</header>
+	</div>
+        <div class="menu-bar">
+            <ul>
+                <li><a href= "homepage2.html">Homepage</a></li>
+                <li><a href= "healthinfo.html">Health Info</a></li>
+                <li class="active"><a href= "nurse1.html">Nurse</a>
+                    <div class="sub-menu-1">
+                      <ul>
+                         <li class="hover-me"><a href="patientinformation.html">Manage Patient Information</a>
+                           <div class="sub-menu-2">
+                           <ul>
+                              <li><a href="">Update Patient Information</a></li>
+                               <li><a href="/HRCS/displaypatientinformation.html">View Patient Information</a></li>
+                           </ul>
+                           </div>
+                         </li>
+                         <li class="hover-me"><a href="patientmedicine.html">Manage Patient Medicine</p></a>
+                          <div class="sub-menu-2">
+                           <ul>
+                              <li><a href="">Update Patient Medicine</a></li>
+                               <li><a href="/HRCS/displaypatientmedicine.html">View Patient Medicine</a></li>
+                           </ul>
+                           </div>
+                         </li>
+                        
+                      </ul>
+                    </div>
+                    </li>
+                <li><a href= "#">Help</a></li>
+                <li><a href= "Homepage2.html">Logout</a></li>
+                
+            </ul>
+		</div>
+		
+	<div>
+		<br>
+		<br><br><br><br><br>
+	</div>
+    <form action="" autocomplete="off" id = "search" method="POST">
+        <input type="text" name="text" class="search" placeholder="Search Here">
+        <input type="submit" name="submit" class="submit" value="Search">
+    
+    </form>
+    
+    <div>
+        <br><br><br>
+    </div>
+    
+    
+    <h2>View Patient Medicine</h2>
+    
+    <div>
+        <br><br>
+    </div>
+    
+    <?php 
+    
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "hrcs";
+    
+    $mysqli = new mysqli($servername, $username, $password, $database); 
+    $query = "SELECT * FROM patient_medicine";
+     
+    echo '<table border="0" cellspacing="2" cellpadding="2" > 
+          <tr> 
+              <th> <font face="Arial">Patient ID</font> </th> 
+              <th> <font face="Arial">Name of Medicine</font> </th> 
+              <th> <font face="Arial">Dos</font> </th> 
+              <th> <font face="Arial">Frequency</font> </th> 
+              <th> <font face="Arial">Duration</font> </th> 
+              <th> <font face="Arial">Update</font> </th> 
+              <th> <font face="Arial">Delete</font> </th> 
+    
+          </tr>';
+     
+    if ($result = $mysqli->query($query)) {
+        while ($row = $result->fetch_assoc()) {
+            $patientid = $row["PatientID"];
+            $name_of_medicine = $row["Name_of_medicine"];
+            $dos = $row["Dos"];
+            $frequency= $row["Frequency"];
+            $duration = $row["Duration"]; 
+             
+     
+            echo '<tr> 
+                      <td>'.$patientid.'</td> 
+                      <td>'. $name_of_medicine.'</td> 
+                      <td>'.$dos.'</td> 
+                      <td>'.$frequency.'</td> 
+                      <td>'.$duration.'</td> 
+                     
+                      <td ><a href="">Update</a></td> 
+                      <td ><a href="">Delete</a></td> 
+    
+                      
+                  </tr>';
+        }
+        $result->free();
+    } 
+    ?>
+    
+	
+   
+   </body>
+ </html>
+
+
+
+ 

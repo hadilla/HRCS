@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Patient Information</title>
+	<link rel="stylesheet" type="text/css" href="css(baru)/displaypatientinformation.css">
+  
+  </head>
+	 <body>
+	  <div id="wrapper">
+		  <header>
+			  <h1>Health REPORT CARD SYSTEM</h1>
+		  </header>
+		  
+		  <div class="menu-bar">
+			  <ul>
+				  <li><a href= "homepage2.html">Homepage</a></li>
+				  <li><a href= "healthinfo.html">Health Info</a></li>
+				  <li class="active"><a href= "HRCS/nurse1.html">Nurse</a>
+					  <div class="sub-menu-1">
+						<ul>
+						   <li class="hover-me"><a href="patientinformation.html">Manage Patient Information</a>
+							 <div class="sub-menu-2">
+							 <ul>
+								<li><a href="">Update Patient Information</a>
+								 <li><a href="/HRCS/displaypatientinformation.html">View Patient Information</a>
+							 </ul>
+							 </div>
+						   </li>
+						   <li class="hover-me"><a href="patientmedicine.html">Manage Patient Medicine</p></a>
+							<div class="sub-menu-2">
+							 <ul>
+								<li><a href="">Update Patient Medicine</a>
+								 <li><a href="/HRCS/displaypatientmedicine.html">View Patient Medicine</a>
+							 </ul>
+							 </div>
+						   </li>
+						  
+						</ul>
+					  </div>
+					  </li>
+					   
+				  <li><a href= "#">Help</a></li>
+				  <li><a href= "HRCS/homepage2.html">Logout</a></li>
+				  
+				  </ul>
+				</div>
+
+<div>
+<br><br><br><br><br><br>
+</div>
+				
+				
+<form action="" autocomplete="off" id = "search" method="POST">
+	<input type="text" name="text" class="search" placeholder="Search Here">
+	<input type="submit" name="submit" class="submit" value="Search">
+
+</form>
+
+<div>
+	<br><br><br>
+</div>
+
+
+<h2>View Patient Information</h2>
+
+<div>
+	<br><br>
+</div>
+
+<?php 
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "hrcs";
+
+$mysqli = new mysqli($servername, $username, $password, $database); 
+$query = "SELECT * FROM patient_information";
+ 
+echo '<table border="0" cellspacing="2" cellpadding="2" > 
+      <tr> 
+          <th> <font face="Arial">Patient ID</font> </th> 
+          <th> <font face="Arial">Username</font> </th> 
+          <th> <font face="Arial">Password</font> </th> 
+          <th> <font face="Arial">Name</font> </th> 
+          <th> <font face="Arial">IC Number</font> </th> 
+          <th> <font face="Arial">Phone Number</font> </th> 
+          <th> <font face="Arial">Address</font> </th> 
+          <th> <font face="Arial">Gender</font> </th> 
+          <th> <font face="Arial">Races</font> </th> 
+          <th> <font face="Arial">Birth Date</font> </th> 
+          <th> <font face="Arial">Update</font> </th> 
+          <th> <font face="Arial">Delete</font> </th> 
+
+      </tr>';
+ 
+if ($result = $mysqli->query($query)) {
+    while ($row = $result->fetch_assoc()) {
+        $patientid = $row["PatientID"];
+        $username = $row["Username"];
+        $password = $row["Password"];
+        $name = $row["Name"];
+        $icNumber = $row["IC_Num"]; 
+        $phoneNumber = $row["Phone_Num"];
+        $address = $row["Address"];
+        $gender = $row["Gender"];
+        $races = $row["Races"];
+        $birthdate = $row["Birth_Date"]; 
+ 
+        echo '<tr> 
+                  <td>'.$patientid.'</td> 
+                  <td>'.$username.'</td> 
+                  <td>'.$password.'</td> 
+                  <td>'.$name.'</td> 
+                  <td>'.$icNumber.'</td> 
+                  <td>'.$phoneNumber.'</td> 
+                  <td>'.$address.'</td>
+                  <td>'.$gender.'</td> 
+                  <td>'.$races.'</td> 
+                  <td>'.$birthdate.'</td> 
+                  <td ><a href=/HRCS/PHP/updatepatientinformation.php?patientid='.$patientid.'>Update</a></td> 
+                  <td ><a href="/HRCS/PHP/deletepatientinformation.php">Delete</a></td> 
+
+                  
+              </tr>';
+    }
+    $result->free();
+} 
+?>
+
+<script>
+  var formData = new FormData();
+  formData.append("PATIENTID", "'.$patientid.'");
+
+  var request = new XMLHttpRequest();
+  request.open("POST", "/HRCS/PHP/updatepatientinformation.php");
+  request.send(formData);
+</script>
+
+
+
+</body>
+</html>

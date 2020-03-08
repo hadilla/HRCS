@@ -1,4 +1,3 @@
-*
 {
 	padding: 0;
 	margin: 0;
@@ -53,7 +52,7 @@
   {
 	  display: block;
 	  position: absolute;
-	  background: rgb(0,0,139);
+	  background: rgb(4, 4, 165);
 	  margin-top: 15px;
 	  margin-left: -15px;
 	  
@@ -126,3 +125,4 @@
 	  
 	  
   }
+  

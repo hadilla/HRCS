@@ -2,9 +2,9 @@
 
 include("db_connect.php");
 
-   echo $getPatientID = $_GET['deletepatientid'];
+   echo $getpatienttid= $_GET['deletepatientid'];
 
-  $sel = "DELETE FROM 'patient_information' WHERE 'PatientID' = '$getPatientID' ";
+  $sel = "DELETE FROM 'patient_information' WHERE 'PatientID' = '$getpatientid' ";
   $qry = mysqli_query($con, $sel);
   
   if ($qry){

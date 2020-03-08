@@ -2,26 +2,66 @@
 <head>
 <title>Doctor</title>
 <link rel="stylesheet" href= "css(baru)/doctor.css">
-<link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
+
 <body>
-    <div class="menu-bar">
-        <ul>
-            <li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
-            <li><a href= "healthinfo.html">Health Info</a></li>
-            <li class = "active"><a href= "Doctor.html">Doctor</a>	
-            <li><a href = "/HRCS/homepage.html">Logout</a></li>
-        </ul>
-    </div>
-   
+
+    <div id="wrapper">
+        <header>
+          <h1>HEALTH REPORT CARD SYSTEM</h1>
+		</header>
+	</div>
+        <div class="menu-bar">
+            <ul>
+                <li><a href= "homepage2.html">Homepage</a></li>
+                <li><a href= "healthinfo.html">Health Info</a></li>
+                <li class="active"><a href= "Doctor.html">Doctor</a>
+                    <div class="sub-menu-1">
+                      <ul>
+                         <li class="hover-me"><a href="patienttreatment.html">Manage Patient Treatment</a>
+                           <div class="sub-menu-2">
+                           <ul>
+                              <li><a href="updatepatienttreatment.html">Update Patient Treatment</a></li>
+                               <li><a href="">View Patient Treatment</a></li>
+                           </ul>
+                           </div>
+                         </li>
+                         <li class="hover-me"><a href="patientmedicine.html">Manage Patient Medicine</p></a>
+                          <div class="sub-menu-2">
+                           <ul>
+                              <li><a href="updatepatientmedicine.html">Update Patient Medicine</a></li>
+                              <li><a href="">View Patient Medicine</a></li>
+                           </ul>
+                           </div>
+                         </li>
+                        
+                      </ul>
+                    </div>
+                    </li>
+                    
+                   
+                <li><a href= "#">Help</a></li>
+                <li><a href= "homepage2.html">Logout</a></li>
+                
+            </ul>
+		</div>
+		
+	<div>
+		<br>
+		<br><br><br><br><br>
+	</div>
+
+
+
    <div class="doctor">
    <h1>DOCTOR PAGE</h1>
    
    <div class="container">
       <button onclick="location.href='/HRCS/patienttreatment.html'" class="btn btn1">Manage Patient Treatment</button>
 	  <button onclick="location.href='/HRCS/patientmedicine.html'"class="btn btn2">Manage Patient Medicine</button>
-	  <button onclick="location.href='/HRCS/viewhealthinformation.html'"class="btn btn3">View Health Information</button>
+	  <button onclick="location.href='/HRCS/doctorview.html'"class="btn btn3">View Health Information</button>
     </div>	
 
 </body>
@@ -35,3 +75,5 @@
 </script>-->
 
 </html>
+
+

@@ -3,69 +3,101 @@
 <head>
    <title>Patient Information Form</title>
    <link rel="stylesheet" type="text/css" href="CSS(baru)/patientinformation.css">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+  
 </head>
    <body>
-     <div class="menu-bar">
-     <ul>
-     
-	   <li><a href= "homepage.html"><i class="fa fa-home"></i>Home</a></li>
-       <li><a href= "healthinfo.html">Health Info</a></li>
-       <li class="active"><a href= "nurse.html">Nurse</a>
-       <div class="sub-menu-1">
-	   <ul>
-	     <li ><a href="patientinformation.html">Manage Patient Information</a></li>
-		 <li ><a href="patientmedicine.html">Manage Patient Medicine</a></li>
-		 <li><a href="#">View Health Information</a></li>  
-		 
-	  </ul>
+	<div id="wrapper">
+        <header>
+            <h1>HEALTH REPORT CARD SYSTEM</h1>
+		</header>
+		
+        <div class="menu-bar">
+            <ul>
+                <li><a href= "homepage2.html">Homepage</a></li>
+                <li><a href= "healthinfo.html">Health Info</a></li>
+                <li class="active"><a href= "nurse1.html">Nurse</a>
+                    <div class="sub-menu-1">
+                      <ul>
+                         <li class="hover-me"><a href="patientinformation.html">Manage Patient Information</a>
+                           <div class="sub-menu-2">
+                           <ul>
+                              <li><a href="">Update Patient Information</a></li>
+                               <li><a href="/HRCS/displaypatientinformation.html">View Patient Information</a></li>
+                           </ul>
+                           </div>
+                         </li>
+                         <li class="hover-me"><a href="patientmedicine.html">Manage Patient Medicine</p></a>
+                          <div class="sub-menu-2">
+                           <ul>
+                              <li><a href="">Update Patient Medicine</a></li>
+                               <li><a href="/HRCS/displaypatientmedicine.html">View Patient Medicine</a></li>
+                           </ul>
+                           </div>
+                         </li>
+                        
+                      </ul>
+                    </div>
+                    </li>
+                    
+                   
+                <li><a href= "#">Help</a></li>
+                <li><a href= "Homepage2.html">Logout</a></li>
+                
+            </ul>
+		</div>
+		
+	<div>
+		<br>
+		<br><br><br><br><br>
 	</div>
-	</li>
-	    
-     <li><a href= "homepage">Logout</a></li>
-   
-       </ul>
-       </div> 
-   
-  
-        <br>
-        <br>
-        <br>
-	
+
 	<div class="patientinformation">
 	  <h2>Patient Information Form</h2>
-	<form method="POST" id="patientinformation" autocomplete="off" action="/HRCS/PHP/patientinformation.php">
+	<form method="POST" id="patientinformation" autocomplete="off" action="/HRCS/PHP/insertpatientinformation.php">
 	
 		<label> PatientID   :</label><br>
-		<input type="string" name="patientID" id="name" placeholder=""><br><br>
+		<input type="string" name="patientid" id="name" placeholder=""><br><br>
+		<label> Username :</label><br>
+		<input type="string" name="username" id="name" placeholder=""><br><br>
+		<label> Password :</label><br>
+		<input type="password" name="password" id="name" placeholder=""><br><br>		   
 		<label> Name        :</label><br>
 		<input type="string" name="name" id="name" placeholder=""><br><br>
 		<label> IC Number   :</label><br>
-		<input type="string" name="ic_number" id="name" placeholder=""><br><br>
+		<input type="icNumber" name="ic_number" id="name" placeholder=""><br><br>
 		<label>Phone Number :</label><br>
-		<input type="string" name="phone_number" id="num" placeholder=""><br><br>
+		<input type="phoneNumber" name="phone_number" id="num" placeholder=""><br><br>
 		<label> Address      :</label><br>
-		<textarea name ="Address" rows="5" cols="55"></textarea><br><br>
+		<textarea name ="address" rows="5" cols="55"></textarea><br><br>
 		<label> Gender      :</label><br>
-		<input type="radio" name="position" value="Male" checked>Male<br>
-        <input type="radio" name="position" value="Female">Female<br><br>
+		<input type="radio" name="gender" value="Male" checked>Male<br>
+        <input type="radio" name="gender" value="Female">Female<br><br>
 		<label> Races       :</label><br>
 	    <select name="races"> 
 			  <option value="Malay">Malay</option>
               <option value="chinese">Chinese</option>
               <option value="indian">Indian</option>
-              <option value="other">Other</option>   
+              <option value="other">Others</option>   
 		</select><br><br>
 		<label> BirthDate       :</label><br>
 		<input type="date" name="birthdate" id="name" placeholder="Enter BirthDate"><br><br>
-		
-		<input type="submit" name="" value="Reset" id="sub">
-		<input type="submit" name="" value="Save" id="sub">
+		<input type="reset" name="reset" value="Reset" id="sub">
+		<input type="submit" name="save" value="Save" id="sub">
 	</form>
-	</div>
-	
-   
-   
+  </div>
+  <div>
+    <br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+  </div>
+
    </body>
  </html>
+
