@@ -103,8 +103,7 @@
                       <td>'.$dos.'</td> 
                       <td>'.$frequency.'</td> 
                       <td>'.$duration.'</td> 
-                     
-                      <td ><a href="">Update</a></td> 
+                      <td ><a href=/HRCS/PHP/updatepatientmedicine.php?patientid='.$patientid.'>Update</a></td> 
                       <td ><a href="">Delete</a></td> 
     
                       
@@ -113,7 +112,15 @@
         $result->free();
     } 
     ?>
-    
+     <script>
+        var formData = new FormData();
+        formData.append("PATIENTID", "'.$patientid.'");
+      
+        var request = new XMLHttpRequest();
+        request.open("POST", "/HRCS/PHP/updatepatientmedicine.php");
+        request.send(formData);
+      </script>
+      
 	
    
    </body>

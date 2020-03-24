@@ -9,14 +9,14 @@
 	 <body>
 	  <div id="wrapper">
 		  <header>
-			  <h1>Health REPORT CARD SYSTEM</h1>
+			  <h1>HEALTH REPORT CARD SYSTEM</h1>
 		  </header>
 		  
 		  <div class="menu-bar">
 			  <ul>
 				  <li><a href= "homepage2.html">Homepage</a></li>
 				  <li><a href= "healthinfo.html">Health Info</a></li>
-				  <li class="active"><a href= "HRCS/nurse1.html">Nurse</a>
+				  <li class="active"><a href= "nurse1.html">Nurse</a>
 					  <div class="sub-menu-1">
 						<ul>
 						   <li class="hover-me"><a href="patientinformation.html">Manage Patient Information</a>
@@ -41,7 +41,7 @@
 					  </li>
 					   
 				  <li><a href= "#">Help</a></li>
-				  <li><a href= "HRCS/homepage2.html">Logout</a></li>
+				  <li><a href= "homepage2.html">Logout</a></li>
 				  
 				  </ul>
 				</div>
@@ -120,9 +120,8 @@ if ($result = $mysqli->query($query)) {
                   <td>'.$races.'</td> 
                   <td>'.$birthdate.'</td> 
                   <td ><a href=/HRCS/PHP/updatepatientinformation.php?patientid='.$patientid.'>Update</a></td> 
-                  <td ><a href="/HRCS/PHP/deletepatientinformation.php">Delete</a></td> 
+                  <td ><a href="">Delete</a></td> 
 
-                  
               </tr>';
     }
     $result->free();
@@ -142,3 +141,6 @@ if ($result = $mysqli->query($query)) {
 
 </body>
 </html>
+
+
+

@@ -81,7 +81,7 @@ if(isset($_GET['patientid']) && $_GET['patientid'] !== '')
 			<form method="POST" id="updatepatientinformation" autocomplete="off" action="/HRCS/PHP/updatepatientinformation_Submit.php?patientid_up=<?php echo $getpatientid; ?>">
 			
 				<label> PatientID   :</label><br>
-				<input type="string" name="patientid" id="name" placeholder="" value="<?php echo $patientid ?>"><br><br>
+				<input type="string" name="patientid" id="name" placeholder="" value="<?php echo $patientid ?>" ><br><br>
 				<label> Username :</label><br>
 				<input type="string" name="username" id="name" placeholder="" value="<?php echo $usernameR ?>"><br><br>
 				<label> Password :</label><br>
@@ -89,9 +89,9 @@ if(isset($_GET['patientid']) && $_GET['patientid'] !== '')
 				<label> Name        :</label><br>
 				<input type="string" name="name" id="name" placeholder="" value="<?php echo $name ?>"><br><br>
 				<label> IC Number   :</label><br>
-				<input type="icNumber" name="ic_number" id="name" placeholder="" value="<?php echo $icNumber ?>"><br><br>
+				<input type="ic_number" name="ic_number" id="name" placeholder="" value="<?php echo $icNumber ?>"><br><br>
 				<label>Phone Number :</label><br>
-				<input type="phoneNumber" name="phone_number" id="num" placeholder="" value="<?php echo $phoneNumber ?>"><br><br>
+				<input type="phone_number" name="phone_number" id="num" placeholder="" value="<?php echo $phoneNumber ?>"><br><br>
 				<label> Address      :</label><br>
 				<textarea name ="address" rows="5" cols="55"><?php echo $address?></textarea><br><br>
 				<label> Gender      :</label><br>
@@ -102,9 +102,9 @@ if(isset($_GET['patientid']) && $_GET['patientid'] !== '')
 				<label> Races       :</label><br>
 				<select name="races" disabled>
 					<option value="Malay" <?php if($races=="Malay") echo 'selected="selected"'; ?> >Malay</option>
-					<option value="chinese" <?php if($races=="chinese") echo 'selected="selected"'; ?> >Chinese</option>
-					<option value="indian" <?php if($races=="indian") echo 'selected="selected"'; ?> >Indian</option>
-					<option value="other" <?php if($races=="other") echo 'selected="selected"'; ?> >Others</option>   
+					<option value="Chinese" <?php if($races=="Chinese") echo 'selected="selected"'; ?> >Chinese</option>
+					<option value="Indian" <?php if($races=="Indian") echo 'selected="selected"'; ?> >Indian</option>
+					<option value="Other" <?php if($races=="Other") echo 'selected="selected"'; ?> >Others</option>   
 				</select><br><br>
 				<label> BirthDate       :</label><br>
 				<input type="date" name="birthdate" id="name" placeholder="Enter BirthDate" value="<?php echo strftime('%Y-%m-%d',strtotime($birthdate)); ?>"  disabled><br><br>
