@@ -8,7 +8,7 @@ include("db_connect.php");
   $qry = mysqli_query($con, $sel);
   
   if ($qry){
-	 header("location: patientinformation.php");
+	 header("location: displaypatientinformation.php");
 	  
   }
   

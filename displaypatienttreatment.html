@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Patient Medicine Form</title>
-   <link rel="stylesheet" type="text/css" href="css(baru)/displaypatientmedicine.css">
+   <title>Patient Treatment Form</title>
+   <link rel="stylesheet" type="text/css" href="css(baru)/displaypatienttreatment.css">
   
    
 </head>
@@ -110,7 +110,7 @@
                       <td>'.$investigation.'</td> 
                       <td>'.$treatment.'</td> 
                 
-                      <td ><a href="">Update</a></td> 
+                      <td ><a href=/HRCS/PHP/updatepatienttreatment.php?patientid='.$patientid.'>Update</a></td> 
                       <td ><a href="">Delete</a></td> 
     
                       
@@ -119,6 +119,14 @@
         $result->free();
     } 
     ?>
+    <script>
+        var formData = new FormData();
+        formData.append("PATIENTID", "'.$patientid.'");
+      
+        var request = new XMLHttpRequest();
+        request.open("POST", "/HRCS/PHP/updatepatienttreatment.php");
+        request.send(formData);
+      </script>
     
 	
    
