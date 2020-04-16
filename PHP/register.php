@@ -50,10 +50,11 @@ if (!empty($staffid) || !empty($fullname) || !empty($usernameR) || !empty($passw
                 $stmt = $con->prepare($INSERT);
                 $stmt->bind_param("ssssssss", $staffid, $usernameR, $passwordR, $position, $icNumber,  $email, $fullname, $phoneNumber); // yg ssss banyak2 tu sebab s tu menandakan value yang store dlm database adalah string
                 $stmt->execute();
+                
                 ?>   <!-- kena tutup dulu php sebab utk alert ni kena masuk language html dan javascript-->
                 <script type="text/javascript">
                     alert("Success to register");  //popup
-                    history.go(-1);  //dari register.php dia akan patah balik ke register.html
+                    history.go(-1);  //dari register.php dia akan patah balik ke register.html ikut dlm folder
                     window.location.href="register.html";  //dia bukak balik register.html
                 </script>
                 <?php  //bukak balik php
@@ -62,7 +63,15 @@ if (!empty($staffid) || !empty($fullname) || !empty($usernameR) || !empty($passw
             } 
             else 
             {
-                echo "Someone already register using this Staff ID";
+                ?> 
+                <script type="text/javascript">
+                    alert("Someone already register using this Staff ID");
+                    history.go(-1);
+                    window.location.href="register.html";
+                </script>
+                <?php
+                
+                //echo "Someone already register using this Staff ID";
             }
             $stmt->close();
             $con->close();
