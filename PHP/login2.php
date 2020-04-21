@@ -73,14 +73,14 @@
                 die();
             }
         }
-        /*if ($userL=="Patient")// nie abaikan sat,sbab user patient,xdak kat register
+        if ($userL=="Patient")
         {
-            $result1 = mysqli_query($con,"SELECT Username, Password FROM doctor_register WHERE Username = '".$_POST['username']."' AND Password = '".$_POST['password']."'") or die ("Failed to query database" .mysql_error());
+            $result1 = mysqli_query($con,"SELECT Username, Password FROM patient_information WHERE Username = '".$_POST['username']."' AND Password = '".$_POST['password']."'") or die ("Failed to query database" .mysql_error());
             $row = mysqli_fetch_array($result1); //dia masukkan data drpd data row yang dah dapat dalam table database
 
             if($row['Username'] == $usernameL && $row['Password'] == $passwordL)
             {
-                header("location: /HRCS/Doctor.html");
+                header("location: /HRCS/patient.html");
             }
             else
             {
@@ -93,7 +93,7 @@
                 <?php  
                 die();
             }
-        }*/
+        }
     }
 }
 

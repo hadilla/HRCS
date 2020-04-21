@@ -5,9 +5,10 @@
 }
   body
   {
-	 background-image: url(../images/whitebackground.jpg);
+	background-image: url(../images/whitebackground.jpg);
 	background-size: cover;
 	background-position: center;
+	font-family: sans-serif;
   }
   .box{
 	background: #2d85b0;

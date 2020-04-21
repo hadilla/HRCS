@@ -5,10 +5,10 @@
 }
 	
 body{	
-	background: url(../images/whitebackground.jpg);
+	background-image: url(../images/whitebackground.jpg);
 	background-size: cover;
 	background-position: center;
-	font-family: san-serif;
+	font-family: sans-serif;
 	
 }
 .loginbox{
@@ -34,7 +34,7 @@ body{
 		
 		
 	}
-	h1{
+	h2{
 		margin: 0;
 		padding: 0 0 10px;
 		text-align: center;
@@ -104,7 +104,7 @@ body{
 		padding: 0px;
 	  }
 	  
-	  header{
+	header{
 		background-color: #2196F3;
 		height: 50px;
 		padding: 4px;

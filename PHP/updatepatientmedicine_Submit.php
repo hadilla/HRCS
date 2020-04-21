@@ -13,9 +13,11 @@ if (!$con)
 }
 else
 {
-    if(isset($_GET['patientid_up']) && $_GET['patientid_up'] !== '')
+    if(isset($_GET['matricnumber_up']) && $_GET['matricnumber_up'] !== '')
     {
+
         $getpatientid = $_GET['patientid_up'];
+        
         $patientid = $_POST['patientid'];    
         $name_of_medicine = $_POST['name_of_medicine'];   
         $dos = $_POST['dos'];

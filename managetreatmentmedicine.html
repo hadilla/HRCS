@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>View Patient Treatment and Medicine Form</title>
+   <title>Patient Treatment and Medicine Form</title>
    <link rel="stylesheet" type="text/css" href="CSS(baru)/managetreatmentandmedicine.css">
   
 </head>
@@ -23,7 +23,7 @@
                            <ul>
                               <li><a href="/HRCS/treatmentandmedicine.html">Add Patient Treatment and Medicine Form</a></li>
                                <li><a href="/HRCS/managetreatmentmedicine.html">Manage Patient Treatment and Medicine</a></li>
-                               <li><a href="">View</a></li>
+                               <li><a href="/HRCS/doctorview.html">View</a></li>
                            </ul>
                            </div>
                          </li>
@@ -62,7 +62,7 @@
     </div>
     
     
-    <h2>View Patient Treatment and Medicine</h2>
+    <h2>Patient Treatment and Medicine</h2>
     
     <div>
         <br><br>
@@ -89,11 +89,16 @@
               <th> <font face="Arial">Symptom</font> </th> 
               <th> <font face="Arial">Investigation</font> </th> 
               <th> <font face="Arial">Treatment</font> </th> 
-              <th> <font face="Arial">Name 0f medicicine</font> </th> 
+              <th> <font face="Arial">Name of medicine</font> </th> 
               <th> <font face="Arial">Dos</font> </th> 
               <th> <font face="Arial">Frequency</font> </th> 
               <th> <font face="Arial">Duration</font> </th>
-                
+              <th> <font face="Arial">Add</font> </th> 
+              <th> <font face="Arial">Update</font> </th> 
+              <th> <font face="Arial">Delete</font> </th> 
+
+
+              
           </tr>';
      
     if ($result = $mysqli->query($query)) {
@@ -127,6 +132,9 @@
                       <td>'.$dos.'</td> 
                       <td>'.$frequency.'</td> 
                       <td>'.$duration.'</td> 
+                      <td ><a href="/HRCS/treatmentandmedicine.html">Add</a></td> 
+                      <td ><a href=/HRCS/PHP/updatetreatmentmedicine.php?matricnumber='.$matricnumber.'>Update</a></td> 
+                      <td ><a href="">Delete</a></td> 
                   
                   </tr>';
         }
@@ -134,14 +142,15 @@
     } 
     ?>
     
-   <!-- <script>
+    <script>
       var formData = new FormData();
       formData.append("MATRICNUMBER", "'.$matricnumber.'");
     
       var request = new XMLHttpRequest();
       request.open("POST", "/HRCS/PHP/updatetreatmentmedicine.php");
       request.send(formData);
-    </script>-->
+    </script>
     
     </body>
     </html>
+    
