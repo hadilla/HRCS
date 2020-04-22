@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Delete Patient Information</title>
+   <link rel="stylesheet" type="text/css" href="CSS(baru)/deletepatientinformation.css">
+  
+</head>
+   <body>
+	<div id="wrapper">
+        <header>
+            <h1>HEALTH REPORT CARD SYSTEM</h1>
+		</header>
+		
+        <div class="menu-bar">
+            <ul>
+                <li><a href= "homepage2.html">Homepage</a></li>
+               <!---<li><a href= "healthinfo.html">Health Info</a></li>-->
+                <li class="active"><a href= "nurse1.html">Nurse</a>
+                    <div class="sub-menu-1">
+                      <ul>
+                         <li class="hover-me"><a href="/HRCS/nurse1.html">Patient Information</a>
+                           <div class="sub-menu-2">
+                           <ul>
+                              <li><a href="/HRCS/patientinformation.html">Add New Patient</a></li>
+                               <li><a href="/HRCS/managepatientinformation.html">Manage Patient Information</a></li>
+                           </ul>
+                           </div>
+                         </li>
+                         <li class="hover-me"><a href="/HRCS/nurseview.html">View Patient Treatment and Medicine</p></a>
+                          <!--<div class="sub-menu-2">
+                           <ul>
+                              <li><a href="">Update Patient Medicine</a></li>
+                               <li><a href="/HRCS/displaypatientmedicine.html">View Patient Medicine</a></li>
+                           </ul>
+                           </div>-->
+                         </li>
+                        
+                      </ul>
+                    </div>
+                    </li>
+                    
+                <li><a href= "#">Help</a></li>
+				<li><a href= "Homepage2.html">Logout</a></li>
+				<li><a href= "nurse1.html">Back</a></li>
+                
+            </ul>
+		</div>
+		
+	<div>
+		<br>
+		<br><br><br><br>
+	</div>
+	
+
+    <?php
+         if(isset($_POST['delete'])) {
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $db = "hrcs";
+
+           $con = mysqli_connect($servername, $username, $password, $db);
+
+
+           if(!$con) {
+	       die("Connection failed: ".mysqli_connect_error());
+           }
+
+            $emp_matricnumber = $_POST['emp_matricnumber'];
+            
+            $sql = "DELETE FROM patient_information WHERE Matric_Num = $emp_matricnumber" ;
+            mysql_select_db('hrcs');
+            $retval = mysql_query( $sql, $conn );
+            
+            if(! $retval ) {
+               die('Could not delete data: ' . mysql_error());
+            }
+            
+            echo "Deleted data successfully\n";
+            
+            mysql_close($conn);
+         }else {
+    ?>
+             
+        <div class="deletepatientinformation">
+            <h2>Delete Patient Information</h2>
+            <form method="POST" id="deletepatientinformation" autocomplete="off" action="/HRCS/PHP/deletepatientinformation.php">
+                <label> Matric Number :</label><br>
+                <input type="string" name="matricnumber" id="name" placeholder=""><br><br>
+
+                <div class="form-submit">
+                   <input type="reset" name="reset" value="Reset" id="sub">
+                   <input type="submit" name='submit' value="Delete" id="sub">     
+                </div>
+            </form>
+        </div>
+
+        <?php
+         }
+      ?>
+      
+   </body>
+</html>

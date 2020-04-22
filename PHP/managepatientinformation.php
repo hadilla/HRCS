@@ -91,7 +91,7 @@ while($row = mysqli_fetch_array($qrydisplay)){
 	$races = $row['Races'];
 	$birthdate = $row['Birth_Date'];
 
-echo "<tr><td>".$date."<tr><td>".$matricnumber."</td><td>".$usernameR."</td><td>".$passwordR."</td><td>".$name."</td><td>".$icNumber."</td><td>".$phoneNumber."</td><td>".$address."</td><td>".$gender."</td><td>".$races."</td><td>".$birthdate."</td><td><a href='updatepatientinformation.php?update=$matricnumber'>Update</a></td><td><a href='deletepatientinformation.php?deletepatientid=$matricnumber'>Delete</a></td><tr>";
+echo "<tr><td>".$date."<tr><td>".$matricnumber."</td><td>".$usernameR."</td><td>".$passwordR."</td><td>".$name."</td><td>".$icNumber."</td><td>".$phoneNumber."</td><td>".$address."</td><td>".$gender."</td><td>".$races."</td><td>".$birthdate."</td><td><a href='insertpatientinformation.php?add=$matricnumber>Add</a></td><td><a href='updatepatientinformation.php?update=$matricnumber'>Update</a></td><td><a href='deletepatientinformation.php?deletematricnumber=$matricnumber'>Delete</a></td><tr>";
 
 	/*echo "<tr><td>".$patientid."</td><td>".$name. "</td></td>".$ic_number."</td><td>".$phone_number."</td><td>" .$address."</td><td>".$gender."</td><td>"
 	.$races."</td><td>".$birthdate."</td><td><a href='updatepatientinformation.php?update=$patientID'>Update</a></td><td><a href='deletepatientinformation.php?deletepatientid=$patientid'>Delete</a></td><tr>";*/

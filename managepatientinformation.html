@@ -92,6 +92,7 @@ echo '<table border="0" cellspacing="2" cellpadding="2" >
           <th> <font face="Arial">Gender</font> </th> 
           <th> <font face="Arial">Races</font> </th> 
           <th> <font face="Arial">Birth Date</font> </th> 
+          <th> <font face="Arial">Add</font> </th> 
           <th> <font face="Arial">Update</font> </th> 
           <th> <font face="Arial">Delete</font> </th> 
 
@@ -125,8 +126,9 @@ if ($result = $mysqli->query($query)) {
                   <td>'.$gender.'</td> 
                   <td>'.$races.'</td> 
                   <td>'.$birthdate.'</td> 
+                  <td ><a href="/HRCS/patientinformation.html">Add</a></td> 
                   <td ><a href=/HRCS/PHP/updatepatientinformation.php?matricnumber='.$matricnumber.'>Update</a></td> 
-                  <td ><a href="">Delete</a></td> 
+                  <td ><a href="/HRCS/deletepatientinformation.html">Delete</a></td> 
 
               </tr>';
     }
