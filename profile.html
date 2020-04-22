@@ -1,3 +1,15 @@
+<!--amik data dari url kat browser pastu masuk dlm GET-->
+<?php
+    if(isset($_GET['username']) && $_GET['username'] !== '')
+    {
+        $username_id = $_GET['username'];
+    } 
+    else 
+    {
+    echo "failed";
+    }
+?>
+
 
 <!DOCTYPE html>
 <html>
