@@ -81,6 +81,7 @@
             if($row['Username'] == $usernameL && $row['Password'] == $passwordL)
             {
                 header("location: /HRCS/patient.html");
+                //buat coding parsing username ke page patient.html by url
             }
             else
             {
