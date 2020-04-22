@@ -69,21 +69,132 @@
     </form>
     <div>
         <?php
-        $servername = "localhost";
-        $username = "root";  
-        $password = "";
-        $database = "hrcs";
 
-        $mysqli = new mysqli($servername, $username, $password, $database); 
-        $query = "SELECT * FROM patient_information"; 
-          
-        $q=mysqli_query($database,"SELECT*FROM patient_information where Matric_Num='$_SESSION[patient_information]'");
+        if(isset($_GET['username']) && $_GET['username'] !== '')
+        {
+            $username_id = $_GET['username'];
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $db = "hrcs";   
+
+            $con = mysqli_connect($servername, $username, $password, $db);
+
+            if (!$con) 
+            {
+                die("Connection failed" . mysqli_connect_error());
+            }
+            else
+            {
+                //TAK DAPAT YANG NIH.....
+               //$q = mysqli_query($con, "SELECT * FROM patient_information WHERE Username = '".$_GET['username']."'")  or die ("Failed to query database" .mysqli_error());
+               $q = mysqli_query($con, "SELECT * FROM patient_information WHERE Username = $username_id")  or die ("Failed to query database" .mysqli_error());
+              
+            echo "<h2 style ='text-align: center'>My Profile</h2>";
+
+     
+            $row = mysqli_fetch_array($q);
+            //if($row['Username'] == $_GET['username'])
+            if($row['Username'] == $username_id)
+            {
+                echo "<div style='text-align: center'><img class= 'img-circle  profile-img' height=110 width=120 src='(../images/icon.png)'></div>";    
+                echo "<div style='text-align: center'><b>Welcome</b></div>"; 
+                echo "<table>";
+                echo "<tr>";
+                echo "<td>";
+                echo "<b> Matric Number: </b>";
+                echo "</td>";
+                echo "<td>";
+                echo $row['Matric_Num'];
+                echo "</td>";
+                echo"</tr>";
+                echo "<tr>";
+                echo "<td>";
+                echo "<b>Username: </b>";
+                echo "</td>";
+                echo "<td>";
+                echo $row['Username'];
+                echo "</td>";
+                echo"</tr>";
+                        echo "<tr>";
+                            echo "<td>";
+                                echo "<b>Password: </b>";
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row['Password'];
+                            echo "</td>"; 
+                        echo"</tr>";
+        
+                        echo "<tr>";
+                            echo "<td>";
+                                echo "<b>Name: </b>";
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row['Name'];
+                            echo "</td>";
+                        echo"</tr>";
+        
+                        echo "<tr>";
+                            echo "<td>";
+                                echo "<b>IC Number: </b>";
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row['IC_Num'];
+                            echo "</td>";
+                        echo"</tr>";
+        
+                        echo "<tr>";
+                            echo "<td>";
+                                echo "<b>Phone Number: </b>";
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row['Phone_Num'];
+                            echo "</td>";
+                        echo"</tr>";
+        
+                        echo "<tr>";
+                            echo "<td>";
+                                echo "<b>Address: </b>";
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row['Address'];
+                            echo "</td>";
+                        echo"</tr>";
+        
+                        echo "<tr>";
+                            echo "<td>";
+                                echo "<b>Gender: </b>";
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row['Gender'];
+                            echo "</td>";
+                        echo"</tr>";
+        
+                        echo "<tr>";
+                            echo "<td>";
+                                echo "<b>Races</b>";
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row['Races'];
+                            echo "</td>";
+                        echo"</tr>";
+        
+                        echo "<tr>";
+                            echo "<td>";
+                                echo "<b>Birth Date</b>";
+                            echo "</td>";
+                            echo "<td>";
+                                echo $row['Birth_Date'];
+                            echo "</td>";
+                        echo"</tr>"; 
+        
+                    echo "</table>";
+            }
+            }
+        }
         ?>
 
-        <h2 style ="text-align: center;">My Profile</h2>
-
-        <?php
-          $row=mysqli_fetch_assoc($q);
+        <!--/*
 
           echo "<div style='text-align: center'>
                 <img class= 'img-circle  profile-img' height=110 width=120 src='(../images/icon.png)'></div>";
@@ -185,17 +296,9 @@
 
             echo "</table>"
 
-        ?>
-
-         
+        ?>*/-->
 
     </div>
 </div>
 </body>
 </html>
-
-        
- 
-
-
-
