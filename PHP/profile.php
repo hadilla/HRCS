@@ -53,13 +53,10 @@
 <br><br><br><br><br><br>
 </div>
 
-<div class="container">
-    <form action="" method="post">
-          <button class="btn btn-default" style="float: right; width: 70px;" name="Submit1" >Edit</button>
-    </form>
-    <div>
-        <?php
-        $servername = "localhost";
+
+  
+      <!--<?php
+       /* $servername = "localhost";
         $username = "root";  
         $password = "";
         $database = "hrcs";
@@ -175,11 +172,10 @@
 
             echo "</table>"
 
-        ?>
+        ?>*/
 
          
 
-    </div>
-</div>
+
 </body>
 </html>

@@ -80,7 +80,26 @@
 
             if($row['Username'] == $usernameL && $row['Password'] == $passwordL)
             {
-                header("location: /HRCS/patient.html");
+                //header("Location: /HRCS/patient.html?username=$row['Username']");
+                header("Location: /HRCS/patient.html?username='".$row['Username']."'");  //guna untuk parsing username ke page html lain dari file php
+                //header("location: /HRCS/patient.html?username=$row['Username']");
+                /*?>
+                    <script>
+                        var formData = new FormData();
+                        formData.append("USERNAME", "'.$row['Username'].'");
+              
+                        var request = new XMLHttpRequest();
+                        request.open("POST", "/HRCS/patient.html");
+                        request.send(formData);
+                    </script>
+                <?php
+                /*?>
+                <html>
+                    <a href="/HRCS/patient.html?username=<?php echo $row['Username']; ?>">
+                </html>
+                <?php*/
+                //header("location: /HRCS/patient.html");
+                //buat coding parsing username ke page patient.html by url
             }
             else
             {
