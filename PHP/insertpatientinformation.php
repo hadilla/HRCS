@@ -2,7 +2,6 @@
 
 //INSERTING PATIENT DATA INTO DATABASE
 
-
 $date = $_POST['date'];
 $date = date("Y/m/d", strtotime($date));
 $matricnumber = $_POST['matricnumber'];    
@@ -50,8 +49,10 @@ else
         else
         {
             $SELECT = "SELECT Matric_Num FROM patient_information WHERE Matric_Num = ? LIMIT 1";
-              
-            $INSERT = "INSERT INTO patient_information(Date, Matric_Num, Username, Password, Name, IC_Num, Phone_Num, Address, Gender, Races, Birth_Date) values(?,?,?,?,?,?,?,?,?,?,?)";
+
+            $INSERT = "INSERT INTO patient_information(Date, Matric_Num) values(?,?)";
+
+            //$INSERT = "INSERT INTO patient_information(Date, Matric_Num, Username, Password, Name, IC_Num, Phone_Num, Address, Gender, Races, Birth_Date) values(?,?,?,?,?,?,?,?,?,?,?)";
 
             //Prepare statement
              //$stmt = $con->prepare( "SELECT PatientID FROM patient_information WHERE PatientID = ? LIMIT 1";);
@@ -66,11 +67,12 @@ else
             {
                 $stmt->close();
                 $stmt = $con->prepare($INSERT);
-                $stmt->bind_param("ssssssissss",$date, $matricnumber, $usernameR, $passwordR, $name, $icNumber, $phoneNumber, $address, $gender, $races, $birthdate); 
+                $stmt->bind_param("ss",$date, $matricnumber);
+               // $stmt->bind_param("ssssssissss",$date, $matricnumber, $usernameR, $passwordR, $name, $icNumber, $phoneNumber, $address, $gender, $races, $birthdate); 
                 $stmt->execute();
                 ?> 
                     <script type="text/javascript">
-                        alert("Success to save"); 
+                        alert("Success to add"); 
                         history.go(-1);  
                         window.location.href="patientinformation.html";  
                     </script>

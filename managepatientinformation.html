@@ -75,6 +75,10 @@ $username = "root";
 $password = "";
 $database = "hrcs";
 
+
+
+
+
 $mysqli = new mysqli($servername, $username, $password, $database); 
 $query = "SELECT * FROM patient_information";
  
@@ -126,9 +130,9 @@ if ($result = $mysqli->query($query)) {
                   <td>'.$gender.'</td> 
                   <td>'.$races.'</td> 
                   <td>'.$birthdate.'</td> 
-                  <td ><a href="/HRCS/patientinformation.html">Add</a></td> 
+                  <td ><a href=/HRCS/PHP/existingpatient.php?matricnumber='.$matricnumber.'>Add</a></td> 
                   <td ><a href=/HRCS/PHP/updatepatientinformation.php?matricnumber='.$matricnumber.'>Update</a></td> 
-                  <td ><a href="/HRCS/deletepatientinformation.html">Delete</a></td> 
+                  <td ><a href=/HRCS/PHP/deletepatientinformation.php?matricnumber='.$matricnumber.'>Delete</a></td> 
 
               </tr>';
     }

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $servername = "localhost";
 $username = "root";
@@ -7,43 +7,49 @@ $db = "hrcs";
 
 $con = mysqli_connect($servername, $username, $password, $db);
 
+//Check connection
 if(!$con) {
-	die("Connection failed: ".mysqli_connect_error());
+ die("Connection failed: ".mysqli_connect_error());
 }
 
-// sql to delete a record
-$sql = "DELETE FROM 'patient_information' WHERE Matric_Num= '$matricnumber'";
+   // Select Database
+   mysqli_select_db($con, 'hcrs');
 
-if ($con->query($sql) === TRUE) {
-    echo "Record deleted successfully";
-} else {
-    echo "Error deleting record: " . $con->error;
-}
+   //select query
+   $sql = "DELETE FROM patient_information WHERE Matric_Num='$_GET[matricnumber]'";
 
-$con->close();
+   //execute the query
+   if(mysqli_query($con,$sql))
+     header("location: /HRCS/managepatientinformation.html");
 
+    else
+       echo "Not Deleted";
 
-/*echo $getmatricnumber= $_GET['matricnumber'];
+       {
+    ?>   
 
-  $sel = "DELETE FROM 'patient_information' WHERE 'Matric_Num' = '$getmatricnumber' ";
+    
+            <script type="text/javascript">
+                alert("Data was delete"); 
+                history.go(-1);  
+                window.location.href="managepatientinformation.html";  
+            </script>
+        <?php  
+        die();
+    }
 
-
-  if ($conn->query($sql) === TRUE) {
-    echo "Record deleted successfully";
-} else {
-    echo "Error deleting record: " . $conn->error;
-}
-
-$conn->close();
-
-$qry = mysqli_query($con, $sel)
-  
- if ($qry){
-	 header("location: managepatientinformation.php");
-	  
-  }*/
 
 ?>
+
+
+
+       
+
+ 
+
+
+
+
 
 
 

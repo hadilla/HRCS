@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Delete(try)</title>
+   <link rel="stylesheet" type="text/css" href="CSS(baru)/deletepatientinformation.css">
+  
+</head>
+   <body>
+	<div id="wrapper">
+        <header>
+            <h1>HEALTH REPORT CARD SYSTEM</h1>
+		</header>
+		
+        <div class="menu-bar">
+            <ul>
+                <li><a href= "homepage2.html">Homepage</a></li>
+               <!---<li><a href= "healthinfo.html">Health Info</a></li>-->
+                <li class="active"><a href= "nurse1.html">Nurse</a>
+                    <div class="sub-menu-1">
+                      <ul>
+                         <li class="hover-me"><a href="/HRCS/nurse1.html">Patient Information</a>
+                           <div class="sub-menu-2">
+                           <ul>
+                              <li><a href="/HRCS/patientinformation.html">Add New Patient</a></li>
+                               <li><a href="/HRCS/managepatientinformation.html">Manage Patient Information</a></li>
+                           </ul>
+                           </div>
+                         </li>
+                         <li class="hover-me"><a href="/HRCS/nurseview.html">View Patient Treatment and Medicine</p></a>
+                          <!--<div class="sub-menu-2">
+                           <ul>
+                              <li><a href="">Update Patient Medicine</a></li>
+                               <li><a href="/HRCS/displaypatientmedicine.html">View Patient Medicine</a></li>
+                           </ul>
+                           </div>-->
+                         </li>
+                        
+                      </ul>
+                    </div>
+                    </li>
+                    
+                <li><a href= "#">Help</a></li>
+				<li><a href= "Homepage2.html">Logout</a></li>
+				<li><a href= "nurse1.html">Back</a></li>
+                
+            </ul>
+		</div>
+		
+	<div>
+		<br>
+		<br><br><br><br>
+	</div>
+
+   <table border="0" cellspacing="2" cellpadding="2" > 
+      <tr> 
+
+         <th>Date</th>
+         <th>Matric Number</th>
+         <th>Username</th>
+         <th>Delete</th>
+
+
+
+
+
+          <!--<th> <font face="Arial">Date</font> </th> 
+          <th> <font face="Arial">Matric Number</font> </th> 
+          <th> <font face="Arial">Username</font> </th> 
+          <th> <font face="Arial">Password</font> </th> 
+          <th> <font face="Arial">Name</font> </th> 
+          <th> <font face="Arial">IC Number</font> </th> 
+          <th> <font face="Arial">Phone Number</font> </th> 
+          <th> <font face="Arial">Address</font> </th> 
+          <th> <font face="Arial">Gender</font> </th> 
+          <th> <font face="Arial">Races</font> </th> 
+          <th> <font face="Arial">Birth Date</font> </th> 
+          <th> <font face="Arial">Add</font> </th> 
+          <th> <font face="Arial">Update</font> </th> 
+          <th> <font face="Arial">Delete</font> </th>-->
+
+      </tr>
+
+     <?php
+
+     $servername = "localhost";
+     $username = "root";
+     $password = "";
+     $db = "hrcs";
+
+     //Create connection
+     $con = mysqli_connect($servername, $username, $password, $db);
+
+     //Check connection
+     if(!$con) {
+	  die("Connection failed: ".mysqli_connect_error());
+     }
+
+        // Select Database
+        mysqli_select_db($con, 'hcrs');
+
+        //select query
+        $sql = "SELECT * FROM patient_information";
+
+        //execute the query
+        $records = mysqli_query($con, $sql);
+
+        while($row = mysqli_fetch_array($records))
+        {
+           echo "<tr>";
+           echo  "<td>".$row['Date']."</td>";
+           echo  "<td>".$row['Matric_Num']."</td>";
+           echo  "<td>".$row['Username']."</td>";
+           echo  "<td><a href=/HRCS/PHP/delete.php?matricnumber=".$row['Matric_Num'].">Delete</a></td>";
+
+        }
+
+     ?>
+   </table>
+
+</body>
+</html>

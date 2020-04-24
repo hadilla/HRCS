@@ -86,7 +86,7 @@ if(isset($_GET['matricnumber']) && $_GET['matricnumber'] !== '')
     <label> Date       :</label><br>
 	<input type="date" name="date" id="name" placeholder="" value="<?php echo strftime('%Y-%m-%d',strtotime($date)); ?>"><br><br>
 	<label> Matric Number   :</label><br>
-	<input type="string" name="matricnumber" id="name" placeholder="" value="<?php echo $matricnumber ?>" ><br><br>
+	<input type="string" name="matricnumber" id="name" placeholder="" value="<?php echo $matricnumber ?> "><br><br>
 	<label> Username :</label><br>
 	<input type="string" name="username" id="name" placeholder="" value="<?php echo $usernameR ?>"><br><br>
 	<label> Password :</label><br>
@@ -291,3 +291,7 @@ if(isset($_GET['matricnumber']) && $_GET['matricnumber'] !== '')
 
    </body>
  </html>-->
+
+
+
+ 
