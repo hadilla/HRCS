@@ -50,9 +50,7 @@ else
         {
             $SELECT = "SELECT Matric_Num FROM patient_information WHERE Matric_Num = ? LIMIT 1";
 
-            $INSERT = "INSERT INTO patient_information(Date, Matric_Num) values(?,?)";
-
-            //$INSERT = "INSERT INTO patient_information(Date, Matric_Num, Username, Password, Name, IC_Num, Phone_Num, Address, Gender, Races, Birth_Date) values(?,?,?,?,?,?,?,?,?,?,?)";
+            $INSERT = "INSERT INTO patient_information(Date, Matric_Num, Username, Password, Name, IC_Num, Phone_Num, Address, Gender, Races, Birth_Date) values(?,?,?,?,?,?,?,?,?,?,?)";
 
             //Prepare statement
              //$stmt = $con->prepare( "SELECT PatientID FROM patient_information WHERE PatientID = ? LIMIT 1";);
