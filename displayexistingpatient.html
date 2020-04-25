@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>View Patient Information</title>
-	<link rel="stylesheet" type="text/css" href="css(baru)/managepatientinformation.css">
+	<title>Display Existing Patient</title>
+	<link rel="stylesheet" type="text/css" href="css(baru)/displayexistingpatient.css">
   
   </head>
 	 <body>
@@ -62,7 +61,7 @@
 </div>
 
 
-<h2>View Patient Information</h2>
+<h2>View Existing Patient </h2>
 
 <div>
 	<br><br>
@@ -75,32 +74,15 @@ $username = "root";
 $password = "";
 $database = "hrcs";
 
-
-
-
-
 $mysqli = new mysqli($servername, $username, $password, $database); 
-$query = "SELECT * FROM patient_information";
+$query = "SELECT * FROM existing_patient_information";
  
 echo '<table border="0" cellspacing="2" cellpadding="2" > 
       <tr> 
 
           <th> <font face="Arial">Date</font> </th> 
           <th> <font face="Arial">Matric Number</font> </th> 
-          <th> <font face="Arial">Username</font> </th> 
-          <th> <font face="Arial">Password</font> </th> 
-          <th> <font face="Arial">Name</font> </th> 
-          <th> <font face="Arial">IC Number</font> </th> 
-          <th> <font face="Arial">Phone Number</font> </th> 
-          <th> <font face="Arial">Address</font> </th> 
-          <th> <font face="Arial">Gender</font> </th> 
-          <th> <font face="Arial">Races</font> </th> 
-          <th> <font face="Arial">Birth Date</font> </th> 
-          <th> <font face="Arial">Add</font> </th> 
-          <th> <font face="Arial">Update</font> </th> 
-          <th> <font face="Arial">Delete</font> </th> 
-          <th> <font face="Arial">View</font> </th> 
-
+        
       </tr>';
  
 if ($result = $mysqli->query($query)) {
@@ -108,51 +90,32 @@ if ($result = $mysqli->query($query)) {
 
         $date = $row["Date"];
         $matricnumber = $row["Matric_Num"];
-        $username = $row["Username"];
-        $password = $row["Password"];
-        $name = $row["Name"];
-        $icNumber = $row["IC_Num"]; 
-        $phoneNumber = $row["Phone_Num"];
-        $address = $row["Address"];
-        $gender = $row["Gender"];
-        $races = $row["Races"];
-        $birthdate = $row["Birth_Date"]; 
+       
  
         echo '<tr> 
 
                   <td>'.$date.'</td> 
                   <td>'.$matricnumber.'</td> 
-                  <td>'.$username.'</td> 
-                  <td>'.$password.'</td> 
-                  <td>'.$name.'</td> 
-                  <td>'.$icNumber.'</td> 
-                  <td>'.$phoneNumber.'</td> 
-                  <td>'.$address.'</td>
-                  <td>'.$gender.'</td> 
-                  <td>'.$races.'</td> 
-                  <td>'.$birthdate.'</td> 
-                  <td ><a href="/HRCS/PHP/existingpatient2.php">Add</a></td> 
-                  <td ><a href=/HRCS/PHP/updatepatientinformation.php?matricnumber='.$matricnumber.'>Update</a></td> 
-                  <td ><a href=/HRCS/PHP/deletepatientinformation.php?matricnumber='.$matricnumber.'>Delete</a></td> 
-                  <td ><a href="/HRCS/PHP/displayexistingpatient.php">View</a></td> 
-
+                  
               </tr>';
     }
     $result->free();
 } 
 ?>
 
-<script>
+<!--<script>
   var formData = new FormData();
   formData.append("MATRICNUMBER", "'.$matricnumber.'");
 
   var request = new XMLHttpRequest();
   request.open("POST", "/HRCS/PHP/updatepatientinformation.php");
   request.send(formData);
-</script>
+</script>-->
 
 </body>
 </html>
+
+
 
 
 

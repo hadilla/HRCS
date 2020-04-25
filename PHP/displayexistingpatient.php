@@ -6,8 +6,8 @@ include("db_connect.php");
 <!DOCTYPE html>
 <html>
 <head>
-	<title>View Patient Information</title>
-	<link rel="stylesheet" type="text/css" href="css(baru)/managepatientinformation.css">
+	<title>Display existing patient</title>
+	<link rel="stylesheet" type="text/css" href="/HRCS/css(baru)/displayexistingpatient.css">
   
   </head>
 	 <body>
@@ -16,7 +16,7 @@ include("db_connect.php");
 			  <h1>HEALTH REPORT CARD SYSTEM</h1>
 		  </header>
 		  
-		  <div class="menu-bar">
+	<div class="menu-bar">
         <ul>
             <li><a href= "homepage2.html">Homepage</a></li>
             <li><a href= "healthinfo.html">Health Info</a></li>
@@ -47,8 +47,8 @@ include("db_connect.php");
             <li><a href= "#">Help</a></li>
             <li><a href= "Homepage2.html">Logout</a></li>
             <li><a href= "nurse1.html">Back</a></li>
-				  </ul>
-				</div>
+		</ul>
+	</div>
 
 <div>
 <br><br><br><br><br><br>
@@ -66,32 +66,14 @@ include("db_connect.php");
      <tr>
 
 <?php
-$sel = "SELECT * FROM patient_information";
+$sel = "SELECT * FROM existing_patient_information";
 $qrydisplay = mysqli_query($con, $sel);
 while($row = mysqli_fetch_array($qrydisplay)){
-	/*$patientid = $row['patientid'];
-	$name = $row['name'];
-	$icnumber = $row['ic_number'];
-	$phonenumber = $row['phone_number'];
-	$address = $row['address'];
-	$gender = $row['gender'];
-	$races = $row['races'];
-	$birthdate = $row['birthdate'];*/
-
-	
 	$date = $row['Date'];
 	$matricnumber = $row['Matric_Num'];    
-	$usernameR = $row['Username'];   
-	$passwordR = $row['Password'];
-	$name = $row['Name'];
-	$icNumber = $row['IC_Num'];
-	$phoneNumber = $row['Phone_Num'];
-	$address = $row['Address'];
-	$gender = $row['Gender'];
-	$races = $row['Races'];
-	$birthdate = $row['Birth_Date'];
+	
 
-echo "<tr><td>".$date."<tr><td>".$matricnumber."</td><td>".$usernameR."</td><td>".$passwordR."</td><td>".$name."</td><td>".$icNumber."</td><td>".$phoneNumber."</td><td>".$address."</td><td>".$gender."</td><td>".$races."</td><td>".$birthdate."</td><td><a href='existingpatient.php?add=$matricnumber>Add</a></td><td><a href='updatepatientinformation.php?update=$matricnumber'>Update</a></td><td><a href='deletepatientinformation.php?deletematricnumber=$matricnumber'>Delete</a><a href='displayexistingpatient.php?viewmatricnumber=$matricnumber'>View</a></td><tr>";
+echo "<tr><td>".$date."<tr><td>".$matricnumber."</td><tr>";
 
 	/*echo "<tr><td>".$patientid."</td><td>".$name. "</td></td>".$ic_number."</td><td>".$phone_number."</td><td>" .$address."</td><td>".$gender."</td><td>"
 	.$races."</td><td>".$birthdate."</td><td><a href='updatepatientinformation.php?update=$patientID'>Update</a></td><td><a href='deletepatientinformation.php?deletepatientid=$patientid'>Delete</a></td><tr>";*/

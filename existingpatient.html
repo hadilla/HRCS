@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Existing Patient Information Form</title>
-   <link rel="stylesheet" type="text/css" href="CSS(baru)/patientinformation.css">
+   <title>Existing Patient Information</title>
+   <link rel="stylesheet" type="text/css" href="CSS(baru)/existingpatient.css">
   
 </head>
    <body>
@@ -41,7 +41,7 @@
                     
         <li><a href= "#">Help</a></li>
 				<li><a href= "Homepage2.html">Logout</a></li>
-				<li><a href= "nurse1.html">Back</a></li>
+				<li><a href= "/HRCS/managepatientinformation.html">Back</a></li>
                 
             </ul>
 		</div>
@@ -49,31 +49,28 @@
 	<div>
 		<br>
 		<br><br><br><br>
-	</div>
+  </div>
+  
+    <button onclick="window.location.href = '/HRCS/PHP/displayexistingpatient.php'">View</button>
 
-	<div class="patientinformation">
-	  <h2>Existing Patient Information Form</h2>
-    <form method="POST" id="patientinformation" autocomplete="off" action="/HRCS/PHP/existingpatient.php">
+  
+  
+	<div class="existingpatient">
+	  <h2>Existing Patient Information </h2>
+    <form method="POST" id="existingpatient" autocomplete="off" action="/HRCS/PHP/existingpatient2.php">
 	
 		<label> Date       :</label><br>
 		<input type="date" name="date" id="name" placeholder=""><br><br>
-		<label> Matric Number  :</label><br>
+    <label> Matric Number  :</label><br>
     <input type="string" name="matricnumber" id="name" placeholder=""><br><br>
+
     <input type="reset" name="reset" value="Reset" id="sub">
-		<input type="submit" name="save" value="Save" id="sub">
+    <input type="submit" name="save" value="Save" id="sub">
+    
+     </form>
+  </div>
 		
-    <div>
-        <br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-    </div>
+    
 
    </body>
  </html>
