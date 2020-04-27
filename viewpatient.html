@@ -94,9 +94,9 @@ $mysqli = new mysqli($servername, $username, $password, $database);
      
     if ($result = $mysqli->query($query)) {
         while ($row = $result->fetch_assoc()) {
+
     
             $date = $row["Date"];
-           
             $diagnosis_system = $row["Diagnosis_system"];
             $clinical_finding = $row["Clinical_finding"];
             $symptom = $row["Symptom"]; 
