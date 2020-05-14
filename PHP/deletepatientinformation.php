@@ -17,9 +17,9 @@ if(!$con) {
    {
     mysqli_select_db($con, 'hrcs');
     $sql = "DELETE FROM patient_information WHERE Matric_Num ='$_GET[matricnumber]'";
-    
+
     ?>
-      <script>
+      <script type = "text/javascript">
       var r = confirm("Are you sure want to delete ?");
       if (r == true) {
           alert("Success delete");

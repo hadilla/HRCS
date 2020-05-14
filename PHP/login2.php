@@ -75,8 +75,8 @@
         }
         if ($userL=="Patient")
         {
-            $result1 = mysqli_query($con,"SELECT Username, Password FROM patient_information WHERE Username = '".$_POST['username']."'AND Password = '".$_POST['password']."'") or die ("Failed to query database" .mysql_error());
-            $row = mysqli_fetch_array($result1); //dia masukkan data drpd data row yang dah dapat dalam table database
+            $patient = mysqli_query($con,"SELECT Username, Password FROM patient_information WHERE Username = '".$_POST['username']."'AND Password = '".$_POST['password']."'") or die ("Failed to query database" .mysql_error());
+            $row = mysqli_fetch_array($patient); //dia masukkan data drpd data row yang dah dapat dalam table database
 
             if($row['Username'] == $usernameL && $row['Password'] == $passwordL)
             {
@@ -94,7 +94,7 @@
                     </script>
                 <?php
                 /*?>
-                <html>
+                <html>s
                     <a href="/HRCS/patient.html?username=<?php echo $row['Username']; ?>">
                 </html>
                 <?php*/

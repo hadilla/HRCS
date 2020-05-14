@@ -1,15 +1,42 @@
-<!--amik data dari url kat browser pastu masuk dlm GET-->
+
 <?php
-    if(isset($_GET['username']) && $_GET['username'] !== '')
+if(isset($_GET['username']) && $_GET['username'] !== '')
+{
+    $username = $_GET['username'];
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $db = "hrcs";   
+
+    $con = mysqli_connect($servername, $username, $password,$db);
+
+    if (!$con) 
     {
-        $username_id = $_GET['username'];
-    } 
-    else 
-    {
-      echo "failed";
+        die("Connection failed: " . mysqli_connect_error());
     }
+    else
+    {
+        
+        $patient = mysqli_query($con,"SELECT Username, Name FROM patient_information WHERE Username = $username") or die ("Failed to query database" .mysql_error());
+        $row = mysqli_fetch_array($patient);
+
+        if($row['username'] == $_GET['username'])
+        {
+            $row['Name'];
+        }
+    }
+}
+
+else
+{
+    header("location: /HRCS/patient.html");
+}
 ?>
 
+
+
+<!DOCTYPE html>
 <html>
 <head>
 <title>Patient</title>
@@ -62,8 +89,8 @@
               <div class="img-area"></div>
               <div class="img-text">
                   <span class="header-text"><strong>Patient Health Information</strong></span><br><br><br>
-                  <a href=/HRCS/profile.html?username=<?php echo $_GET['username'] ?>><button>Profile</button></a>    <!--kena buat camni untuk post data ke url html yg lain dari file html ni-->
-                  <a href="/HRCS/viewpatient.html"><button>View  Treatment and Medicine</button></a>
+                  <a href=/HRCS/profile.html?username=<?php echo $_GET['username'] ?><button>Profile</button></a>    <!--kena buat camni untuk post data ke url html yg lain dari file html ni-->
+                  <a href=/HRCS/viewpatient.html?username=<?php echo $_GET['username'] ?><button>View  Treatment and Medicine</button></a>
                   
               </div>
           </div>
@@ -109,3 +136,4 @@
 </script>
 
 </html>
+
