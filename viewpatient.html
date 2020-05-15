@@ -1,3 +1,42 @@
+<?php
+if(isset($_GET['username']) && $_GET['username'] !== '')
+{
+    $username = $_GET['username'];
+
+    $servername = "localhost";
+    $dbusername = "root";
+    $password = "";
+    $db = "hrcs";   
+
+    $con = mysqli_connect($servername, $dbusername, $password,$db);
+
+    if (!$con) 
+    {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    else
+    {
+        
+        $patient = mysqli_query($con,"SELECT Username, Matric_Num, Name FROM patient_information WHERE Username = $username") or die ("Failed to query database" .mysql_error());
+        $row = mysqli_fetch_array($patient);
+       
+        
+
+        if($row['Username'] == $_GET['username'])
+        {
+            $row['Name'];
+            $matricnumber = $row['Matric_Num'];
+
+        }
+    }
+}
+
+else
+{
+    header("location: /HRCS/patient.html");
+}
+?>
+
 
 <!DOCTYPE html>
 <html>
@@ -16,10 +55,10 @@
         <ul>
             <li><a href= "homepage2.html">Homepage</a></li>
             <li><a href= "healthinfo.html">Health Info</a></li>
-            <li class="active"><a href= "patient.html">Patient</a>
+            <li class="active"><a href= "/HRCS/patient.html?username">Patient</a>
                 <div class="sub-menu-1">
                   <ul>
-                     <li class="hover-me"><a href="/HRCS/patient.html?username=%27adila%27">Patient Health Information</a>
+                     <li class="hover-me"><a href="/HRCS/patient.html?username">Patient Health Information</a>
                        <div class="sub-menu-2">
                        <ul>
                           <li><a href="/HRCS/profile.html">Profile</a></li>
@@ -54,9 +93,9 @@
   <form method="POST" id="viewpatient" autocomplete="off" action="">
   
      <label> Matric Number  :</label><br>
-     <input type="string" name="matricnumber" id="name" placeholder=""><br><br>
+     <textarea type="string" name="matricnumber" id="name" placeholder="" ><?php echo $row['Matric_Num']?></textarea><br><br>
      <label> Name  :</label><br>
-     <input type="text" name="name" id="name" placeholder=""><br>
+     <textarea type="text" name="name" id="name" placeholder="" ><?php echo $row['Name']?></textarea><br>
   </form>
 </div>
 
@@ -68,14 +107,14 @@
 <?php 
 
 $servername = "localhost";
-$username = "root";
+$dbusername = "root";
 $password = "";
 $database = "hrcs";
 
-$mysqli = new mysqli($servername, $username, $password, $database); 
-    $query = "SELECT * FROM treatment_and_medicine";
+$mysqli = new mysqli($servername, $dbusername, $password, $database); 
+   $matricnum = $row['Matric_Num'];
+    $query = "SELECT * FROM treatment_and_medicine WHERE Matric_Num = $matricnum";
 
-    
      
     echo '<table border="0" cellspacing="2" cellpadding="2" > 
          
@@ -98,7 +137,6 @@ $mysqli = new mysqli($servername, $username, $password, $database);
 
     
             $date = $row["Date"];
-           
             $diagnosis_system = $row["Diagnosis_system"];
             $clinical_finding = $row["Clinical_finding"];
             $symptom = $row["Symptom"]; 
@@ -111,8 +149,7 @@ $mysqli = new mysqli($servername, $username, $password, $database);
 
      
             echo '<tr> 
-                      <td>'.$date.'</td> 
-                      
+                      <td>'.$date.'</td>    
                       <td>'.$diagnosis_system.'</td> 
                       <td>'.$clinical_finding.'</td> 
                       <td>'.$symptom.'</td> 
