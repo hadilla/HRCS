@@ -5,11 +5,11 @@ if(isset($_GET['username']) && $_GET['username'] !== '')
     $username = $_GET['username'];
 
     $servername = "localhost";
-    $username = "root";
+    $dbusername = "root";
     $password = "";
     $db = "hrcs";   
 
-    $con = mysqli_connect($servername, $username, $password,$db);
+    $con = mysqli_connect($servername, $dbusername, $password,$db);
 
     if (!$con) 
     {
@@ -21,7 +21,7 @@ if(isset($_GET['username']) && $_GET['username'] !== '')
         $patient = mysqli_query($con,"SELECT Username, Name FROM patient_information WHERE Username = $username") or die ("Failed to query database" .mysql_error());
         $row = mysqli_fetch_array($patient);
 
-        if($row['username'] == $_GET['username'])
+        if($row['Username'] == $_GET['username'])
         {
             $row['Name'];
         }
@@ -33,8 +33,6 @@ else
     header("location: /HRCS/patient.html");
 }
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -79,19 +77,24 @@ else
                     
                 <li><a href= "#">Help</a></li>
                 <li><a href= "/HRCS/Homepage2.html">Logout</a></li>
-                
+ 
             </ul>
          </div>
-		
+
+        <br>
+
+        <div>
+            <h3>WELCOME TO HEALTH REPORT CARD SYSTEM <?php echo $username?></h3> <!--kena buat camni untuk post data ke url html yg lain dari file html ni-->
+
+            
 
         <div class="box-area">
           <div class="single-box">
               <div class="img-area"></div>
               <div class="img-text">
                   <span class="header-text"><strong>Patient Health Information</strong></span><br><br><br>
-                  <a href=/HRCS/profile.html?username=<?php echo $_GET['username'] ?><button>Profile</button></a>    <!--kena buat camni untuk post data ke url html yg lain dari file html ni-->
-                  <a href=/HRCS/viewpatient.html?username=<?php echo $_GET['username'] ?><button>View  Treatment and Medicine</button></a>
-                  
+                  <a href=/HRCS/profile.html?username=<?php echo $username?>><button>Profile</button></a>    <!--kena buat camni untuk post data ke url html yg lain dari file html ni-->
+                  <a href=/HRCS/viewpatient.html?username=<?php echo $username?>><button>View  Treatment and Medicine</button></a>
               </div>
           </div>
           <!--<div class="single-box">

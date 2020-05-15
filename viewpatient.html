@@ -1,17 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +19,7 @@
             <li class="active"><a href= "patient.html">Patient</a>
                 <div class="sub-menu-1">
                   <ul>
-                     <li class="hover-me"><a href="patient.html">Patient Health Information</a>
+                     <li class="hover-me"><a href="/HRCS/patient.html?username=%27adila%27">Patient Health Information</a>
                        <div class="sub-menu-2">
                        <ul>
                           <li><a href="/HRCS/profile.html">Profile</a></li>
@@ -63,7 +50,7 @@
 <br><br><br>
 </div>
 
-<!--<div class="viewpatient">  
+<div class="viewpatient">  
   <form method="POST" id="viewpatient" autocomplete="off" action="">
   
      <label> Matric Number  :</label><br>
@@ -75,7 +62,7 @@
 
 <div>
   <br><br><br>
-  </div>-->
+</div>
 
 
 <?php 
@@ -111,6 +98,7 @@ $mysqli = new mysqli($servername, $username, $password, $database);
 
     
             $date = $row["Date"];
+           
             $diagnosis_system = $row["Diagnosis_system"];
             $clinical_finding = $row["Clinical_finding"];
             $symptom = $row["Symptom"]; 
