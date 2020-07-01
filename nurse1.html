@@ -1,3 +1,42 @@
+<?php
+if(isset($_GET['username']) && $_GET['username'] !== '')
+{
+    $username = $_GET['username'];
+
+    $servername = "localhost";
+    $dbusername = "root";
+    $password = "";
+    $db = "hrcs";   
+
+    $con = mysqli_connect($servername, $dbusername, $password,$db);
+
+    if (!$con) 
+    {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    else
+    {
+        
+        $nurse = mysqli_query($con,"SELECT Fullname Username FROM nurse_register WHERE Username = $username") or die ("Failed to query database" .mysql_error());
+        $row = mysqli_fetch_array($nurse);
+       
+        
+
+        if($row['Username'] == $_GET['username'])
+        {
+            $row['Fullname'];
+           
+
+        }
+    }
+}
+
+else
+{
+    header("location: /HRCS/nurse1.html");
+}
+?>
+
 
 <!DOCTYPE html>
 <html>
@@ -42,17 +81,26 @@
                     
                 <li><a href= "#">Help</a></li>
                 <li><a href= "Homepage2.html">Logout</a></li>
+               
+                
                 
             </ul>
          </div>
+
+         <br>
+
+
+        <div>
+           <h3>Succes to login as nurse <?php echo $username?></h3> <!--kena buat camni untuk post data ke url html yg lain dari file html ni-->
+        </div>
 
          <div class="box-area">
              <div class="single-box">
                  <div class="img-area"></div>
                  <div class="img-text">
                      <span class="header-text"><strong>Patient Information</strong></span><br><br><br>
-                     <a href="patientinformation.html"><button>Add New Patient</button></a>
-                     <a href="/HRCS/managepatientinformation.html"><button>Manage Patient Information</button></a>
+                     <a href="/HRCS/patientinformation.html"><button>Add New Patient</button></a>
+                     <a href="/HRCS/managepatientinformation.html">><button>Manage Patient Information</button></a>
                  </div>
              </div>
              <div class="single-box">

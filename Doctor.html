@@ -1,3 +1,63 @@
+<?php
+if(isset($_GET['username']) && $_GET['username'] !== '')
+{
+    $username = $_GET['username'];
+
+    $servername = "localhost";
+    $dbusername = "root";
+    $password = "";
+    $db = "hrcs";   
+
+    $con = mysqli_connect($servername, $dbusername, $password,$db);
+
+    if (!$con) 
+    {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    else
+    {
+        
+        $doctor = mysqli_query($con,"SELECT Fullname Username FROM doctor_register WHERE Username = $username") or die ("Failed to query database" .mysql_error());
+        $row = mysqli_fetch_array($doctor);
+       
+        
+
+        if($row['Username'] == $_GET['username'])
+        {
+            $row['Fullname'];
+           
+
+        }
+    }
+}
+
+else
+{
+    header("location: /HRCS/Doctor.html");
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <html>
 <head>
 <title>Doctor</title>
@@ -43,6 +103,13 @@
                 
             </ul>
          </div>
+
+         <div>
+           <h3>Succes to login as doctor <?php echo $username?></h3><!--kena buat camni untuk post data ke url html yg lain dari file html ni-->
+        </div> 
+
+
+
 		
 
         <div class="box-area">
@@ -65,9 +132,7 @@
         </div>-->
       </div>
 
-<div>
-       <br>
-       <br>S
+    <div>
        <br>
        <br>
        <br>
@@ -76,8 +141,14 @@
        <br>
        <br>
        <br>
- </div>
+       <br>
+       <br>
+    </div>
+
+
+
 </body>
+</html>
 
 <!-- cek semua click yang kita buat kst browser -->
 <!--<script language="javascript" type="text/javascript">
@@ -87,7 +158,7 @@
     }
 </script>-->
 
-</html>
+
 
 
 

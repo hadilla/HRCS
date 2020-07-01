@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>View Patient Information</title>
-	<link rel="stylesheet" type="text/css" href="css(baru)/managepatientinformation.css">
+	<link rel="stylesheet" type="text/css" href="css(baru)/viewpatientinformation.css">
   
   </head>
 	 <body>
@@ -93,11 +92,7 @@ echo '<table border="0" cellspacing="2" cellpadding="2" >
           <th> <font face="Arial">Gender</font> </th> 
           <th> <font face="Arial">Races</font> </th> 
           <th> <font face="Arial">Birth Date</font> </th> 
-          <th> <font face="Arial">Add</font> </th> 
-          <th> <font face="Arial">Update</font> </th> 
-          <th> <font face="Arial">Delete</font> </th> 
-          <th> <font face="Arial">View</font> </th> 
-
+          
       </tr>';
  
 if ($result = $mysqli->query($query)) {
@@ -128,10 +123,7 @@ if ($result = $mysqli->query($query)) {
                   <td>'.$gender.'</td> 
                   <td>'.$races.'</td> 
                   <td>'.$birthdate.'</td> 
-                  <td ><a href="/HRCS/existingpatient.html">Add</a></td> 
-                  <td ><a href=/HRCS/PHP/updatepatientinformation.php?matricnumber='.$matricnumber.'>Update</a></td> 
-                  <td ><a href=/HRCS/PHP/deletepatientinformation.php?matricnumber='.$matricnumber.'>Delete</a></td> 
-                  <td ><a href=/HRCS/viewpatientinformation.html>View</a></td>
+                  
 
               </tr>';
     }
@@ -139,24 +131,18 @@ if ($result = $mysqli->query($query)) {
 } 
 ?>
 
-<script>
+<!--<script>
   var formData = new FormData();
   formData.append("MATRICNUMBER", "'.$matricnumber.'");
 
   var request = new XMLHttpRequest();
   request.open("POST", "/HRCS/PHP/updatepatientinformation.php");
   request.send(formData);
-</script>
-
-
+</script>-->
 
 
 
 
 </body>
 </html>
-
-
-
-
 

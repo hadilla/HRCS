@@ -90,7 +90,7 @@ while($row = mysqli_fetch_array($qrydisplay)){
    $duration = $row["Duration"];
 
 
-echo "<tr><td>".$date.$diagnosis_system."</td><td>".$clinical_finding."</td><td>".$symptom."</td><td>".$investigation."</td><td>".$treatment."</td><td>".$name_of_medicine."</td><td>".$dos."</td><td>".$frequency."</td><td>".$duration."</td><td>";
+echo "<tr><td>".$date."</td><td>".$diagnosis_system."</td><td>".$clinical_finding."</td><td>".$symptom."</td><td>".$investigation."</td><td>".$treatment."</td><td>".$name_of_medicine."</td><td>".$dos."</td><td>".$frequency."</td><td>".$duration."</td><td>";
 //echo "<tr><td>".$date."</td><td>".$matricnumber."</td><td>".$name."</td><td>".$diagnosis_system."</td><td>".$clinical_finding."</td><td>".$symptom."</td><td>".$investigation."</td><td>".$treatment."</td><td>".$name_of_medicine."</td><td>".$dos."</td><td>".$frequency."</td><td>".$duration."</td><td>";
 }
 

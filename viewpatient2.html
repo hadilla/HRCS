@@ -38,12 +38,11 @@ else
 ?>
 
 
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Profile</title>
-	<link rel="stylesheet" type="text/css" href="css(baru)/profile.css">
+	<title>View </title>
+	<link rel="stylesheet" type="text/css" href="css(baru)/viewpatient.css">
   
   </head>
 	 <body>
@@ -55,15 +54,15 @@ else
 		  <div class="menu-bar">
         <ul>
             <li><a href= "homepage2.html">Homepage</a></li>
-            <li><a href= "/HRCS/healthinfo.html">Health Info</a></li>
+            <li><a href= "healthinfo.html">Health Info</a></li>
             <li class="active"><a href= "/HRCS/patient.html?username">Patient</a>
                 <div class="sub-menu-1">
                   <ul>
                      <li class="hover-me"><a href="/HRCS/patient.html?username">Patient Health Information</a>
                        <div class="sub-menu-2">
                        <ul>
-                          <li><a href="/HRCS/profile.html?username">Profile</a></li>
-                           <li><a href="/HRCS/viewpatient.html?username">View Treatment and Medicine</a></li>
+                          <li><a href="/HRCS/profile.html">Profile</a></li>
+                           <li><a href="/HRCS/viewpatient.html">View Treatment and Medicine</a></li>
                        </ul>
                        </div>
                      </li>
@@ -82,7 +81,7 @@ else
                 
             <li><a href= "#">Help</a></li>
             <li><a href= "Homepage2.html">Logout</a></li>
-            <li><a href= "/HRCS/patient.html">Back</a></li>
+            <li><a href= "patient.html">Back</a></li>
 				  </ul>
 				</div>
 
@@ -90,11 +89,20 @@ else
 <br><br><br>
 </div>
 
-<h2>Profile</h2>
+<div class="viewpatient">  
+  <form method="POST" id="viewpatient" autocomplete="off" action="">
+  
+     <label> Matric Number  :</label><br>
+     <textarea type="string" name="matricnumber" id="name" placeholder="" ><?php echo $row['Matric_Num']?></textarea><br><br>
+     <label> Name  :</label><br>
+     <textarea type="text" name="name" id="name" placeholder="" ><?php echo $row['Name']?></textarea><br>
+  </form>
+</div>
 
 <div>
-	<br><br><br><br><br>
+  <br><br><br>
 </div>
+
 
 <?php 
 
@@ -104,22 +112,23 @@ $password = "";
 $database = "hrcs";
 
 $mysqli = new mysqli($servername, $dbusername, $password, $database); 
-   $matricnumber = $row['Matric_Num'];
-    $query = "SELECT * FROM patient_information WHERE Matric_Num = '".$matricnumber."'";
+   $matricnum = $row['Matric_Num'];
+    $query = "SELECT * FROM treatment_and_medicine WHERE Matric_Num = $matricnum";
 
      
     echo '<table border="0" cellspacing="2" cellpadding="2" > 
          
           <tr>
-              <th> <font face="Arial">Matric Number</font> </th> 
-              <th> <font face="Arial">Name</font> </th> 
-              <th> <font face="Arial">IC Number</font> </th> 
-              <th> <font face="Arial">Phone Number</font> </th> 
-              <th> <font face="Arial">Address</font> </th> 
-              <th> <font face="Arial">Gender</font> </th> 
-              <th> <font face="Arial">Races</font> </th> 
-              <th> <font face="Arial">Birth Date</font> </th> 
-             
+              <th> <font face="Arial">Date</font> </th> 
+              <th> <font face="Arial">Diagnosis system</font> </th> 
+              <th> <font face="Arial">Clinical finding</font> </th> 
+              <th> <font face="Arial">Symptom</font> </th> 
+              <th> <font face="Arial">Investigation</font> </th> 
+              <th> <font face="Arial">Treatment</font> </th> 
+              <th> <font face="Arial">Name of medicine</font> </th> 
+              <th> <font face="Arial">Dos</font> </th> 
+              <th> <font face="Arial">Frequency</font> </th> 
+              <th> <font face="Arial">Duration</font> </th>
               
           </tr>';
      
@@ -127,27 +136,29 @@ $mysqli = new mysqli($servername, $dbusername, $password, $database);
         while ($row = $result->fetch_assoc()) {
 
     
-            $matricnumber = $row["Matric_Num"];
-            $name = $row["Name"];
-            $icNumber = $row["IC_Num"];
-            $phoneNumber = $row["Phone_Num"]; 
-            $address = $row["Address"];
-            $gender = $row["Gender"];
-            $races = $row["Races"];
-            $birthdate = $row["Birth_Date"];
-            
+            $date = $row["Date"];
+            $diagnosis_system = $row["Diagnosis_system"];
+            $clinical_finding = $row["Clinical_finding"];
+            $symptom = $row["Symptom"]; 
+            $investigation = $row["Investigation"];
+            $treatment = $row["Treatment"];
+            $name_of_medicine = $row["Name_of_medicine"];
+            $dos = $row["Dos"];
+            $frequency = $row["Frequency"]; 
+            $duration = $row["Duration"];
 
      
             echo '<tr> 
-                      <td>'.$matricnumber.'</td>    
-                      <td>'.$name.'</td> 
-                      <td>'.$icNumber.'</td> 
-                      <td>'.$phoneNumber.'</td> 
-                      <td>'.$address.'</td> 
-                      <td>'.$gender.'</td>
-                      <td>'.$races.'</td> 
-                      <td>'.$birthdate.'</td> 
-                      
+                      <td>'.$date.'</td>    
+                      <td>'.$diagnosis_system.'</td> 
+                      <td>'.$clinical_finding.'</td> 
+                      <td>'.$symptom.'</td> 
+                      <td>'.$investigation.'</td> 
+                      <td>'.$treatment.'</td>
+                      <td>'.$name_of_medicine.'</td> 
+                      <td>'.$dos.'</td> 
+                      <td>'.$frequency.'</td> 
+                      <td>'.$duration.'</td> 
                       
                   
                   </tr>';
@@ -156,7 +167,7 @@ $mysqli = new mysqli($servername, $dbusername, $password, $database);
     } 
     ?>
     
-
-</body>
-</html>
+    
+    </body>
+    </html>
     

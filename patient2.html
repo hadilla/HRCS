@@ -23,7 +23,6 @@ if(isset($_GET['username']) && $_GET['username'] !== '')
         if($row['Username'] == $_GET['username'])
         {
             $row['Name'];
-            $matricnumber = $row['Matric_Num'];
         }
     }
 }
@@ -84,8 +83,7 @@ else
         <br>
 
         <div>
-            <h3>WELCOME TO HEALTH REPORT CARD SYSTEM <?php echo $username?></h3><!--kena buat camni untuk post data ke url html yg lain dari file html ni-->
-        </div> 
+            <h3>WELCOME TO HEALTH REPORT CARD SYSTEM <?php echo $username?></h3> <!--kena buat camni untuk post data ke url html yg lain dari file html ni-->
 
             
 
@@ -95,7 +93,7 @@ else
               <div class="img-text">
                   <span class="header-text"><strong>Patient Health Information</strong></span><br><br><br>
                   <a href=/HRCS/profile.html?username=<?php echo $username?>><button>Profile</button></a>    <!--kena buat camni untuk post data ke url html yg lain dari file html ni-->
-                  <a href=/HRCS/viewpatient.html?username=<?php echo $username?>><button>View  Treatment and Medicine</button></a>
+                  <a href=/HRCS/viewpatient2.html?username=<?php echo $username?>><button>View  Treatment and Medicine</button></a>
               </div>
           </div>
           <!--<div class="single-box">
@@ -140,5 +138,3 @@ else
 </script>
 
 </html>
-
-

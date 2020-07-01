@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Profile</title>
-	<link rel="stylesheet" type="text/css" href="css(baru)/profile.css">
+	<title>View </title>
+	<link rel="stylesheet" type="text/css" href="css(baru)/viewpatient.css">
   
   </head>
 	 <body>
@@ -15,13 +15,13 @@
         <ul>
             <li><a href= "homepage2.html">Homepage</a></li>
             <li><a href= "healthinfo.html">Health Info</a></li>
-            <li class="active"><a href= "/HRCS/patient.html">Patient</a>
+            <li class="active"><a href= "patient.html">Patient</a>
                 <div class="sub-menu-1">
                   <ul>
-                     <li class="hover-me"><a href="/HRCS/patient.html">Patient Health Information</a>
+                     <li class="hover-me"><a href="patient.html">Patient Health Information</a>
                        <div class="sub-menu-2">
                        <ul>
-                          <li><a href="/HRCS/profile.html">Profile</a></li>
+                          <li><a href="">Profile</a></li>
                            <li><a href="/HRCS/viewpatient.html">View Treatment and Medicine</a></li>
                        </ul>
                        </div>
@@ -69,33 +69,34 @@
 
 <?php
 
-$sel = "SELECT * FROM patient_information";
+
+
+
+$sel = "SELECT * FROM treatment_and_medicine";
 $qrydisplay = mysqli_query($con, $sel);
 while($row = mysqli_fetch_array($qrydisplay)){
-	
-	//$date = $row['Date'];
-	$matricnumber = $row['Matric_Num'];    
-	//$usernameR = $row['Username'];   
-	//$passwordR = $row['Password'];
-	$name = $row['Name'];
-	$icNumber = $row['IC_Num'];
-	$phoneNumber = $row['Phone_Num'];
-	$address = $row['Address'];
-	$gender = $row['Gender'];
-	$races = $row['Races'];
-	$birthdate = $row['Birth_Date'];
-
-echo "<tr><td>".$matricnumber."</td><td>"."</td><td>".$name."</td><td>".$icNumber."</td><td>".$phoneNumber."</td><td>".$address."</td><td>".$gender."</td><td>".$races."</td><td>".$birthdate."</td><td>";
-
-	
+   
+   $date = $row["Date"];
+   //$matricnumber = $row["Matric_Num"];
+  // $name = $row["Name"];
+   $diagnosis_system = $row["Diagnosis_system"];
+   $clinical_finding = $row["Clinical_finding"];
+   $symptom = $row["Symptom"]; 
+   $investigation = $row["Investigation"];
+   $treatment = $row["Treatment"];
+   $name_of_medicine = $row["Name_of_medicine"];
+   $dos = $row["Dos"];
+   $frequency = $row["Frequency"]; 
+   $duration = $row["Duration"];
 
 
+echo "<tr><td>".$date.$diagnosis_system."</td><td>".$clinical_finding."</td><td>".$symptom."</td><td>".$investigation."</td><td>".$treatment."</td><td>".$name_of_medicine."</td><td>".$dos."</td><td>".$frequency."</td><td>".$duration."</td><td>";
+//echo "<tr><td>".$date."</td><td>".$matricnumber."</td><td>".$name."</td><td>".$diagnosis_system."</td><td>".$clinical_finding."</td><td>".$symptom."</td><td>".$investigation."</td><td>".$treatment."</td><td>".$name_of_medicine."</td><td>".$dos."</td><td>".$frequency."</td><td>".$duration."</td><td>";
+}
 
 ?>
-
 </tr>
 </table>
-
 <div>
    <br>
    <br>
@@ -104,6 +105,5 @@ echo "<tr><td>".$matricnumber."</td><td>"."</td><td>".$name."</td><td>".$icNumbe
    <br><br><br>
    <br><br><br>
 </div>
-
 </body>
 </html>

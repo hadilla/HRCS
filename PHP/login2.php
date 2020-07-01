@@ -33,12 +33,15 @@
     {
         if ($userL=="Doctor")
         {
-            $result1 = mysqli_query($con,"SELECT Username, Password FROM doctor_register WHERE Username = '".$_POST['username']."' AND Password = '".$_POST['password']."'") or die ("Failed to query database" .mysql_error());
-            $row = mysqli_fetch_array($result1); //dia masukkan data drpd data row yang dah dapat dalam table database
+            $doctor = mysqli_query($con,"SELECT Username, Password FROM doctor_register WHERE Username = '".$_POST['username']."' AND Password = '".$_POST['password']."'") or die ("Failed to query database" .mysql_error());
+            $row = mysqli_fetch_array($doctor); //dia masukkan data drpd data row yang dah dapat dalam table database
 
             if($row['Username'] == $usernameL && $row['Password'] == $passwordL)
             {
-                header("location: /HRCS/Doctor.html");
+                //header("Location: /HRCS/Doctor.html");
+                header("location: /HRCS/Doctor.html?username='".$row['Username']."'");
+                //header("location: /HRCS/Doctor.html?username=".urlencode(base64_encode($row['Username'])));//
+                //header("location: /osc/staff_menu.php?email=".urlencode(base64_encode($row['email']))); //
             }
             else
             {
@@ -54,12 +57,13 @@
         } 
         if ($userL=="Nurse")
         {
-            $result1 = mysqli_query($con,"SELECT Username, Password FROM nurse_register WHERE Username = '".$_POST['username']."' AND Password = '".$_POST['password']."'") or die ("Failed to query database" .mysql_error());
-            $row = mysqli_fetch_array($result1); //dia masukkan data drpd data row yang dah dapat dalam table database
+            $nurse = mysqli_query($con,"SELECT Username, Password FROM nurse_register WHERE Username = '".$_POST['username']."' AND Password = '".$_POST['password']."'") or die ("Failed to query database" .mysql_error());
+            $row = mysqli_fetch_array($nurse); //dia masukkan data drpd data row yang dah dapat dalam table database
 
             if($row['Username'] == $usernameL && $row['Password'] == $passwordL)
             {
-                header("location: /HRCS/nurse1.html");
+                //header("Location: /HRCS/nurse1.html");
+                header("Location: /HRCS/nurse1.html?username='".$row['Username']."'");
             }
             else
             {

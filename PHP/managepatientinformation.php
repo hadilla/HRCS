@@ -101,6 +101,7 @@ echo "<tr><td>".$date."<tr><td>".$matricnumber."</td><td>".$usernameR."</td><td>
 ?>
 </tr>
 </table>
+
 <div>
 	<br>
 	<br>
@@ -109,5 +110,6 @@ echo "<tr><td>".$date."<tr><td>".$matricnumber."</td><td>".$usernameR."</td><td>
 	<br><br><br>
 	<br><br><br>
 </div>
+
 </body>
 </html>
